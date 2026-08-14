@@ -1,0 +1,330 @@
+
+         CSS INTERVIEW QUESTIONS & ANSWERS
+
+
+1. What is CSS? Explain the full form of CSS.
+
+Answer:
+CSS stands for Cascading Style Sheets.
+It is used to style HTML web pages by adding colors, fonts, layouts, spacing, and animations.
+
+Example:
+h1{
+    color: blue;
+}
+
+----------------------------------
+
+2. What is Cascading in CSS? Give a real-time example.
+
+Answer:
+Cascading means when multiple CSS rules are applied to the same element, the browser chooses the rule with higher priority.
+
+Example:
+
+p{
+    color: blue;
+}
+
+p{
+    color: red;
+}
+
+Output:
+Red
+
+----------------------------------
+
+3. Difference between Cascading and Specificity
+
+Cascading:
+• Last rule wins if selectors have equal priority.
+
+Specificity:
+• Decides priority based on selector type.
+
+Priority:
+ID Selector > Class Selector > Element Selector
+
+----------------------------------
+
+4. What are the three types of CSS?
+
+1. Inline CSS
+Example:
+<h1 style="color:red;">Hello</h1>
+
+2. Internal CSS
+Example:
+<style>
+h1{
+color:red;
+}
+</style>
+
+3. External CSS (Recommended)
+
+Example:
+<link rel="stylesheet" href="style.css">
+
+Why External CSS?
+• Easy to maintain
+• Reusable
+• Faster loading
+• Used in real-time projects
+
+----------------------------------
+
+5. CSS Selectors
+
+Universal Selector
+
+*{
+margin:0;
+}
+
+Selects all elements.
+
+----------------
+
+Element Selector
+
+h1{
+color:red;
+}
+
+Selects all h1 elements.
+
+----------------
+
+Class Selector
+
+.box{
+background:blue;
+}
+
+<div class="box"></div>
+
+Used for multiple elements.
+
+----------------
+
+ID Selector
+
+#header{
+background:black;
+}
+
+<header id="header"></header>
+
+Used for a unique element.
+
+----------------
+
+Group Selector
+
+h1,p,span{
+color:red;
+}
+
+Applies the same style to multiple elements.
+
+----------------
+
+Descendant Selector
+
+div p{
+color:red;
+}
+
+Selects every p inside div.
+
+----------------
+
+Child Selector
+
+div > p{
+color:blue;
+}
+
+Selects only the direct child p.
+
+----------------------------------
+
+6. Difference between Class Selector and ID Selector
+
+Class Selector
+• Starts with .
+• Used multiple times
+• Lower priority
+
+ID Selector
+• Starts with #
+• Used only once
+• Higher priority
+
+----------------------------------
+
+7. Difference between Descendant Selector and Child Selector
+
+Descendant Selector
+
+div p
+
+Selects all p elements inside div.
+
+Child Selector
+
+div > p
+
+Selects only direct child p.
+
+----------------------------------
+
+8. Explain CSS Box Model
+
+The Box Model consists of:
+
+1. Content
+2. Padding
+3. Border
+4. Margin
+
+Structure:
+
+Margin
+ Border
+  Padding
+   Content
+
+----------------------------------
+
+9. Difference between Padding and Margin
+
+Padding
+• Space inside the border.
+
+Margin
+• Space outside the border.
+
+Example:
+
+padding:20px;
+margin:20px;
+
+----------------------------------
+
+10. What is box-sizing:border-box?
+
+Example:
+
+*{
+box-sizing:border-box;
+}
+
+Why recommended?
+
+• Includes padding and border inside width and height.
+• Easy layout calculation.
+• Used in most real-time projects.
+
+----------------------------------
+
+11. Display Properties
+
+display:block;
+
+• Starts on a new line.
+• Takes full width.
+
+Example:
+div
+
+----------------
+
+display:inline;
+
+• Does not start on a new line.
+• Width and height cannot be applied.
+
+Example:
+span
+
+----------------
+
+display:inline-block;
+
+• Appears inline.
+• Width and height can be applied.
+
+----------------------------------
+
+12. Can we apply width and height?
+
+div
+Yes
+
+span
+No (default)
+Need:
+display:inline-block;
+
+button
+Yes
+
+----------------------------------
+
+13. Difference between display:none and visibility:hidden
+
+display:none;
+
+• Element is hidden.
+• Space is removed.
+
+visibility:hidden;
+
+• Element is hidden.
+• Space remains.
+
+----------------------------------
+
+14. Explain Flexbox
+
+Flexbox is a one-dimensional layout system used for aligning items.
+
+Flex Container
+Parent element with display:flex;
+
+Flex Item
+Child elements inside the container.
+
+Main Axis
+Horizontal direction.
+
+Cross Axis
+Vertical direction.
+
+----------------------------------
+
+15. How do you perfectly center a div using Flexbox?
+
+.container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+Explanation:
+
+display:flex;
+Enables Flexbox.
+
+justify-content:center;
+Centers horizontally.
+
+align-items:center;
+Centers vertically.
+
+height:100vh;
+Makes the container occupy the full screen height.

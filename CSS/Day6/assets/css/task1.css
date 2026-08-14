@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background: lightseagreen;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.content {
+    padding: 40px;
+    line-height: 2;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(44, 18, 18, 0.884);
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.1);
+}
+
+
+.bi-whatsapp {
+    font-size: 30px;
+}
+.twitter{
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background: #0c24ac;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(44, 18, 18, 0.884);
+    transition: 0.3s;
+   
+}
+.twitter:hover{
+    transform: scale(1.1);
+}
+

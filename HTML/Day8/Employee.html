@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC-Software-Company</title>
+</head>
+<body>
+    <center>
+        <h1> ABC Software Company Employees Registeration</h1>
+    </center>
+    <form method="post">
+        <label>Employee ID :</label>
+        <input type="text" name="Employee ID" placeholder="enter id" required><br /><br />
+        <label>Employee Name :</label>
+        <input type="text" name="Employee Name" placeholder="enter name" required><br /><br />
+        <label>Email :</label>
+        <input type="email" name="Email" placeholder="enter email" required><br /><br />
+        <label>Mobile Number :</label>
+        <input type="tel" name="Mobile Number" placeholder="enter mobile number" required><br /><br />
+        <label>Department :</label>
+        <select name="Department">
+            <option>--select one--</option>
+            <option>Information Technology</option>
+            <option>Marketing</option>
+            <option>Finance</option>
+            <option>Editor</option>
+        </select>
+        <br /><br />
+        <label>Experience :</label>
+        <select name="Experience">
+            <option>--select one--</option>
+            <option>Fresher</option>
+            <option>1 Year</option>
+            <option>2 years</option>
+            <option>3 years</option>
+            <option>4 years</option>
+            <option>5 years above</option>
+        </select>
+        <br /><br />
+        <label>Salary :</label>
+        <input type="number" name="Salary" placeholder="enter salary"><br /><br />
+        <label>Skills :</label><br />
+        <textarea name="Skills" placeholder="Enter Skills" rows="5" cols="20" ></textarea required><br /><br />
+        <label>Resume :</label>
+        <input type="file" name="Resume"><br/><br />
+        <input type="submit" name="submit">
+    </form>
+    <br />
+    <br />
+    <center>
+        <h2>Employee's Report</h2>
+        <table border="5" cellpadding="15">
+            <thead>
+               <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Experience</th>
+                <th>Salary</th>
+                <th>Status</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EMP101</td>
+                    <td>Akash</td>
+                    <td>Information Technology</td>
+                    <td>5 Years above</td>
+                    <td>30000</td>
+                    <td>Selected</td>
+                </tr>
+                <tr>
+                    <td>EMP102</td>
+                    <td>Barathi</td>
+                    <td>Editor</td>
+                    <td>3 Years</td>
+                    <td>25000</td>
+                    <td>waiting list</td>
+                </tr>
+                <tr>
+                    <td>EMP103</td>
+                    <td>Tamil</td>
+                    <td>Marketing</td>
+                    <td>4 Years</td>
+                    <td>35000</td>
+                    <td>Selected</td>
+                </tr>
+                <tr>
+                    <td>EMP104</td>
+                    <td>Vicky</td>
+                    <td>Finance</td>
+                    <td>Fresher</td>
+                    <td>25000</td>
+                    <td>Rejected</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>

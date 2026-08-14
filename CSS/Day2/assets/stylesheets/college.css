@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+#college{
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+ .cse{
+            background-color: rgb(27, 235, 61);
+            text-align: center;
+             padding: 20px;
+    margin: 10px;
+
+          }
+           .it{
+            background-color: blue;
+            text-align: center;
+             padding: 20px;
+    margin: 10px;
+          }
+          .ece{
+            background-color: blueviolet;
+            text-align: center;
+             padding: 20px;
+    margin: 10px;
+          }
+          .eee{
+            background-color: chocolate;
+            text-align: center;
+             padding: 20px;
+    margin: 10px;
+          }
+          .mechanical{
+            background-color: darkolivegreen;
+            text-align: center;
+             padding: 20px;
+    margin: 10px;
+          }

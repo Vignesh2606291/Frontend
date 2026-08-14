@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    text-decoration: none;
+}
+
+#one{
+    background-color: rgb(32, 24, 24);
+    margin: 20px;
+    border: 50px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.two{
+
+    background-color: rgb(85, 185, 185);
+    color: black;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    visibility: hidden;
+
+}

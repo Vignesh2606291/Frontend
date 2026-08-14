@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    text-decoration: none;
+}
+
+#div{
+    background-color: rgb(199, 23, 23);
+    margin: 10px;
+    padding: 20px;
+    border: 20px;
+}
+
+
+.hello{
+
+    background-color: rgb(22, 19, 19);
+    color: antiquewhite;
+    margin: 10px;
+    padding: 20px;
+    border: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    display: none;
+}
+
+
+.one{
+
+    background-color: coral;
+    color: black;
+    height: 500px;
+    margin: 10px;
+    border: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+    
+    
+}

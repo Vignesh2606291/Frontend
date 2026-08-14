@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics-Shop-Inventory</title>
+</head>
+<body>
+     <center>
+        <h2>Electronics Shop Inventory System</h2>
+     </center>
+
+    <form>
+
+        <label>Product ID:</label>
+        <input type="text" name="productid" placeholder="product id" required><br /><br />
+        <label>Product Name:</label>
+        <input type="text" name="productname" placeholder="Enter product name"><br /><br />
+        <label>Brand:</label>
+        <input type="text" name="brand" placeholder="Enter brand"><br /><br />
+        <label>Category:</label>
+        <select name="category" placeholder="Enter Category">
+            <option>Select Category</option>
+            <option>Mobile</option>
+            <option>Laptop</option>
+            <option>Television</option>
+            <option>Headphones</option>
+            <option>Accessories</option>
+        </select>
+        <br /><br />
+        <label>Price:</label>
+        <input type="number" name="price" placeholder="Enter price" required><br /><br />
+        <label>Quantity:</label>
+        <input type="number" name="quantity" placeholder="Enter quantity"required><br /><br />
+        <label>Supplier:</label>
+        <input type="text" name="supplier" placeholder="Enter supplier Name" required><br /><br />
+        <label>Product Image:</label>
+        <input type="file" name="productimage"><br /><br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <br /><br />
+    <center>
+        <h2>Inventory Report</h2>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Stock Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P001</td>
+                    <td>Galaxy S24 Ultra</td>
+                    <td>Samsung</td>
+                    <td>₹60,000</td>
+                    <td>18</td>
+                    <td>In Stock</td>
+                </tr>
+                <tr>
+                    <td>P002</td>
+                    <td>iPhone 14pro max</td>
+                    <td>Apple</td>
+                    <td>₹66,000</td>
+                    <td>15</td>
+                    <td>In Stock</td>
+                </tr>
+                <tr>
+                    <td>P003</td>
+                    <td>Acer one Z14-55</td>
+                    <td>Acer</td>
+                    <td>₹99,998</td>
+                    <td>8</td>
+                    <td>Low Stock</td>
+                </tr>
+                <tr>
+                    <td>P004</td>
+                    <td>Smart TV</td>
+                    <td>Samsung</td>
+                    <td>₹82,000</td>
+                    <td>0</td>
+                    <td>Out of Stock</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>

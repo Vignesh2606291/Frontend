@@ -1,0 +1,109 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ }
+
+ html{
+    scroll-behavior: smooth;
+ }
+
+ body{
+     font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 1%;
+ }
+
+
+ a{
+    text-decoration: none;
+ }
+ 
+
+        #section_1 {
+            background-color: aliceblue;
+
+        }
+
+        #Home {
+            background-color: #3b5774;
+            padding: 5px;
+            align-items: center;
+        }
+
+        #Home img {
+            display: inline-block;
+            margin-left: 5%;
+            padding-top: 01%;
+            width: 150px;
+            height: 100px;
+        }
+
+        #Home h1 {
+            display: inline-block;
+            position: relative;
+            bottom: 50px;
+            left: 160px;
+
+
+        }
+
+        #nav {
+
+            background-color: transparent;
+            padding: 10px;
+            margin-left: 0px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        #section_2 {
+            background-color: rgb(153, 129, 175);
+        }
+
+        #Services ul {
+            font-weight: bold;
+        }
+
+        #About {
+            background-color: rgb(207, 197, 185);
+        }
+
+        #Contact {
+            background-color: rgb(189, 173, 154);
+        }
+
+        #footer {
+            background-color: rgb(127, 202, 202);
+            padding: 5px;
+        }
+
+        #Help {
+            background-color: rgb(138, 161, 115);
+        }
+
+        #footer nav {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        #footer p {
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 330px;
+        }
+
+        #footer img {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-left: 10px;
+        }

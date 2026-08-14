@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration-Form</title>
+</head>
+<body>
+    <center>
+        <h1>Registeration-Form</h1>
+    </center>
+    <form method="post">
+        <label>Student Name :</label>
+        <input type="text" name="Student Name" placeholder="Enter full Name" required><br /><br />
+        <label>Email :</label>
+        <input type="email" name="Email" placeholder="Enter email" required><br/><br />
+        <label>Password :</label>
+        <input type="password" name="Password" placeholder="Enter email Password" required><br /><br />
+        <label>Mobile Number :</label>
+        <input type="tel" name="Mobile Number" placeholder="Enter Number" required><br /><br />
+        <label>Gender :</label>
+        <input type="radio" name="Gender">Male
+        <input type="radio" name="Gender">female
+        <input type="radio" name="Gender">Others <br /><br />
+        <label>Date of Birth :</label>
+        <input type="date" name="DOB" required><br /><br />
+        <label>Skills :</label>
+        <input type="checkbox" name="Skills">Technical
+          <input type="checkbox" name="Skills">Aptitude
+              <input type="checkbox" name="Skills">Communication <br /><br />
+              <label>Course :</label>
+              <select name="Select Course" required>
+                <option>--select course--</option>
+                <option>Java Full Stack</option>
+                <option>Python</option>
+                <option>Digital Marketing</option>
+                <option>Cyber security</option>
+                
+              </select><br /><br />
+              <label>Address :</label><br />
+              <textarea name="Address" placeholder="Address" rows="5" cols="20"></textarea required><br /><br />
+              <label>Profile image :</label>
+              <input type="file" name="Profile-image"><br /><br />
+              <input type="submit" value="Register"> 
+              <input type="reset" value="Reset">
+    </form>
+    <br/>
+    <center>
+        <h2>Student Details</h2>
+        <table border="5" cellpadding="15">
+            <thead>
+               <tr>
+                 <th>SLA ID</th>
+                <th>STUDENT NAME</th>
+                <th>COURSE</th>
+                <th>EMAIL</th>
+                <th>MOBILE NUMBER</th>
+                <th>STATUS</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SLA101</td>
+                    <td>Akash</td>
+                     <td>Java fullstack</td>
+                      <td>akash@gmail.com</td>
+                       <td>7648847670</td>
+                        <td>Paid</td>
+                </tr>
+                <tr>
+                    <td>SLA102</td>
+                     <td>Tamil</td>
+                      <td>Digital Marketing</td>
+                       <td>tamil@gmail.com</td>
+                        <td>6847684789</td>
+                         <td>Pending</td>
+                </tr>
+                <tr>
+                    <td>SLA103</td>
+                    <td>Barathi</td>
+                    <td>Python</td>
+                    <td>barathi@gmail.com</td>
+                    <td>6869849840</td>
+                    <td>Paid</td>
+                </tr>
+                <tr>
+                    <td>SLA104</td>
+                    <td>Vicky</td>
+                    <td>Cyber Security</td>
+                    <td>vicky@gmail.com</td>
+                    <td>7589868980</td>
+                    <td>Pending</td>
+                </tr>
+               </tbody>
+        </table>
+    </center>
+</body>
+</html>

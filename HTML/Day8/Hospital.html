@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo-Hospital</title>
+</head>
+<body>
+    <center>
+        <h2>Apollo Hospital Patient Registration System</h2>
+    </center>
+    <form>
+
+        <label>Patient ID:</label>
+        <input type="text" name="patientid" placeholder="Enter ID" required><br /><br />
+        <label>Patient Name:</label>
+        <input type="text" name="patientname" placeholder="Enter Name"required><br /><br />
+        <label>Age:</label>
+        <input type="number" name="age" placeholder="Enter age"><br /><br />
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br /><br />
+        <label>Blood Group:</label>
+        <select name="bloodgroup">
+            <option>Select Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+        </select>
+        <br /><br />
+        <label>Doctor:</label>
+        <select name="doctor">
+            <option>Select Doctor</option>
+            <option>Dr. Vicky</option>
+            <option>Dr. Tamil</option>
+            <option>Dr. Barathi</option>
+            <option>Dr. Akash</option>
+        </select>
+        <br /><br />
+        <label>Appointment Date:</label>
+        <input type="date" name="appointment"><br /><br />
+        <label>Symptoms:</label><br />
+        <textarea name="symptoms" rows="4" cols="40" placeholder="enter Yours Symptoms" required></textarea>
+        <br /><br />
+        <label>Medical Report Upload:</label><br />
+        <input type="file" name="report"><br /><br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <br /><br />
+    <center>
+        <h2>Patient Report</h2>
+    <table border="1" cellpadding="5">
+
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Blood Group</th>
+                <th>Appointment Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>P101</td>
+                <td>Ajith</td>
+                <td>Dr. Vicky</td>
+                <td>O+</td>
+                <td>07-07-2026</td>
+                <td>Confirmed</td>
+            </tr>
+
+            <tr>
+                <td>P102</td>
+                <td>Suriya</td>
+                <td>Dr. Tamil</td>
+                <td>A+</td>
+                <td>08-07-2026</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>P103</td>
+                <td>Simbu</td>
+                <td>Dr. Barathi</td>
+                <td>B+</td>
+                <td>09-07-2026</td>
+                <td>Confirmed</td>
+            </tr>
+
+            <tr>
+                <td>P104</td>
+                <td>Vijay</td>
+                <td>Dr. Akash</td>
+                <td>AB+</td>
+                <td>10-07-2026</td>
+                <td>Completed</td>
+            </tr>
+
+        </tbody>
+    </table>
+    </center>
+</body>
+</html>

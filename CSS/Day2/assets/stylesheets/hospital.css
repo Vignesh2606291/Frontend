@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+h1{
+    background-color: aqua;
+  
+    width: 1400px;
+    height: 100px;
+}
+
+.div{
+    background-color: rgb(223, 68, 7);
+ 
+  
+}
+h3{
+    background-color: rgb(7, 95, 36);
+    
+
+}
+#foot{
+    background-color: rgb(156, 10, 120);
+    color: aliceblue;
+}
+    
+    

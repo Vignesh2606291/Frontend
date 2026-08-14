@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    padding: 15px;
+    margin: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: lightblue;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.card img {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.card>a>input{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 20px;
+
+}
+.card>a>input:hover{
+    background-color: rgb(137, 190, 13);
+}

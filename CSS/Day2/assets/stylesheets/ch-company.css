@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    background-color: blueviolet;
+    text-align: center;
+    font-size: large;
+    height: 50px;
+}
+p,span{
+    text-align: center;
+    width: 1400px;
+    height: 100px;
+}
+.zoho{
+    background-color: rgb(9, 216, 102);
+}
+
+.freshworks{
+    background-color: rgb(230, 49, 49);
+}
+
+.aspire{
+    background-color: rgb(182, 107, 9);
+}
+
+.cts{
+    background-color: rgb(204, 10, 107);
+}
+
+.tcs{
+    background-color: rgb(13, 154, 201);
+}

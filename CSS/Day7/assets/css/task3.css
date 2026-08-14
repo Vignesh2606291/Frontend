@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+.one{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.card {
+    width: 150px;
+    height: 200px;
+    padding: 15px;
+    margin: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: rgb(107, 176, 199);
+}
+
+.card img {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.card>a>input{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: .4s;
+
+}
+input:hover{
+    background-color: rgb(137, 190, 13);
+}

@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.profile{
+    background-color: aquamarine;
+    text-align: center;
+    border:50px;
+    border: solid 10px;
+    margin: 50px;
+    padding: 70px;
+    width: 600px;
+    height: 700px;
+   }
+   .name{
+    text-align: center;
+    padding: 30px;
+    font-size: larger;
+   }
+
+   h3{
+   text-align: center;
+    padding-bottom: 30px; 
+    font-size:x-large;
+   }

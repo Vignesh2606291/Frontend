@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+#div{
+    background-color: rgb(15, 14, 14);
+}
+
+.one{
+
+    background-color: aquamarine;
+    width: 200px;
+    height: 100px;
+}
+
+.two{
+    background-color: blueviolet;
+      width: 200px;
+    height: 100px;
+    padding: 10px;
+    
+}
+
+.three{
+
+    background-color: chocolate;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 50px;
+}
+
+.four{
+
+    background-color: rgb(158, 30, 30);
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border:20px ;
+    margin: 20px;
+}

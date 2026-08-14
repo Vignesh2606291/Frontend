@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+#tcs{
+    background-color:rgb(216, 216, 60);
+    color: black;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+   
+      border-color: black;
+      border: solid;
+      border-width: 10px;
+
+}
+.all{
+     background-color:rgb(216, 216, 60);
+    color: black;
+    
+}
+
+.all{
+     background-color:rgb(216, 216, 60);
+    color: black;
+   
+   
+}
+
+.all{
+     background-color:rgb(216, 216, 60);
+    color: black;
+ 
+
+}
+
+.contact{
+     background-color:rgb(105, 105, 84);
+    color: black;
+ 
+}
+
+.zoho{
+    background-color:rgb(216, 216, 60);
+    color: black;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    margin:0px;
+   
+      border-color: black;
+      border: solid;
+      border-width:10px;
+}
+
+ .about{
+    background-color:rgb(216, 216, 60);
+    color: rgb(0, 0, 0);
+    
+ }
+    
+ #service{
+    background-color:rgb(216, 216, 60);
+    color: rgb(0, 0, 0);
+    
+ }
+ .help{
+     background-color:rgb(216, 216, 60);
+    color: rgb(0, 0, 0);
+   
+ }
+ #us{
+     background-color:rgb(105, 105, 84);
+    color: black;
+ }
+
+ .infosys{
+    background-color:rgb(216, 216, 60);
+    color: black;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    margin:0px;
+   
+      border-color: black;
+      border: solid;
+      border-width:10px;
+ }
+ .about{
+     background-color:rgb(216, 216, 60);
+    color: rgb(0, 0, 0);
+ }
+
+ .service{
+     background-color:rgb(216, 216, 60);
+    color: rgb(0, 0, 0);
+ }
+
+ #help{
+     background-color:rgb(216, 216, 60);
+    color: rgb(0, 0, 0);
+ }
+
+ .us{
+     background-color:rgb(105, 105, 84);
+    color: black;
+ 
+ }

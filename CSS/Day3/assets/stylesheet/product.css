@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    background-color: rgb(32, 29, 29);
+    color: antiquewhite;
+    text-align: center;
+    padding: 50px;
+}
+
+.one{
+
+    background-color: rgb(53, 54, 54);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.two{
+
+    background-color: rgb(34, 30, 30);
+    color: antiquewhite;
+    text-align: center;
+    width: 700px;
+    height: 400px;
+    padding: 10px;
+    margin: 50px;
+    border: solid 10px black;
+}
+
+.three{
+
+    text-align: center;
+    padding-bottom: ;
+}
