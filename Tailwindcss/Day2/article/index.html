@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Role of JavaScript in Modern Web Applications | Enterprise Architecture & Deep Dive</title>
+  <meta name="description" content="An in-depth, professional educational article and course portal exploring the pivotal role of JavaScript in modern web development, frameworks, DOM engineering, and asynchronous architectures.">
+  <meta name="keywords" content="JavaScript, Modern Web Development, React, Node.js, Angular, Vue, DOM Manipulation, Async Programming, Web Architecture">
+  <meta name="author" content="Enterprise Web Architecture Platform">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0a192f',
+              dark: '#070d17',
+              slate: '#0f172a',
+              card: '#131d31',
+              accent: '#38bdf8',
+              cyan: '#06b6d4',
+              blue: '#0284c7',
+              indigo: '#6366f1',
+              emerald: '#10b981',
+              amber: '#f59e0b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design System Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+
+<body class="bg-[#070d17] text-slate-200 antialiased selection:bg-sky-500 selection:text-white relative min-h-screen flex flex-col">
+
+  <!-- Top Sticky Navigation Bar -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/80 transition-all duration-300">
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress-bar" class="h-0.5 bg-gradient-to-r from-sky-400 via-indigo-500 to-emerald-400 w-0 transition-all duration-150"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18">
+        
+        <!-- Logo & Branding -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center font-bold text-slate-950 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform duration-200">
+            <span class="font-mono text-xl font-extrabold tracking-tighter">JS</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg font-extrabold text-white tracking-tight group-hover:text-sky-400 transition-colors">DevScript</span>
+              <span class="px-1.5 py-0.5 text-[10px] font-bold rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">ENTERPRISE</span>
+            </div>
+            <p class="text-[11px] text-slate-400 font-medium">Modern Web Architecture</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#hero" class="nav-link hover:text-sky-400 transition-colors py-1">Home</a>
+          <a href="#introduction" class="nav-link hover:text-sky-400 transition-colors py-1">Introduction</a>
+          <a href="#features" class="nav-link hover:text-sky-400 transition-colors py-1">Key Features</a>
+          <a href="#applications" class="nav-link hover:text-sky-400 transition-colors py-1">Applications</a>
+          <a href="#frameworks" class="nav-link hover:text-sky-400 transition-colors py-1">Frameworks</a>
+          <a href="#advantages" class="nav-link hover:text-sky-400 transition-colors py-1">Advantages</a>
+          <a href="#playground" class="nav-link hover:text-sky-400 transition-colors py-1">Live Sandbox</a>
+          <a href="#curriculum" class="nav-link hover:text-sky-400 transition-colors py-1">Curriculum</a>
+          <a href="#conclusion" class="nav-link hover:text-sky-400 transition-colors py-1">Conclusion</a>
+        </nav>
+
+        <!-- Right Side Action CTA -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="course.html" class="px-3.5 py-2 text-xs font-semibold rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:border-sky-500 hover:text-sky-400 transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            <span>Course Catalog</span>
+          </a>
+
+          <button class="enroll-modal-btn btn-tech-primary px-4 py-2 text-xs font-bold rounded-lg flex items-center gap-2">
+            <span>Learn More</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="hidden xl:hidden bg-slate-950/98 border-b border-slate-800 px-6 py-6 transition-all duration-200 opacity-0 -translate-y-4">
+      <div class="flex flex-col gap-3 text-sm font-medium">
+        <a href="#hero" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Home</a>
+        <a href="#introduction" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Introduction</a>
+        <a href="#features" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Key Features</a>
+        <a href="#applications" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Applications</a>
+        <a href="#frameworks" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Frameworks</a>
+        <a href="#advantages" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Advantages</a>
+        <a href="#playground" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Live Sandbox</a>
+        <a href="#curriculum" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Curriculum</a>
+        <a href="#conclusion" class="mobile-nav-link py-2 text-slate-300 hover:text-sky-400 border-b border-slate-900">Conclusion</a>
+        <div class="pt-4 flex flex-col gap-2">
+          <a href="course.html" class="w-full text-center py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-200">View Full Course Syllabus</a>
+          <a href="playground.html" class="w-full text-center py-2.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-xs font-bold text-white">Open Dedicated Code Sandbox</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow pt-20">
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section id="hero" class="relative pt-12 pb-24 overflow-hidden tech-bg-glow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Content & Calls to Action -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            
+            <!-- Category Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-sky-500/30 text-sky-300 text-xs font-semibold shadow-inner">
+              <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+              <span>Enterprise Frontend & Fullstack Architecture</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              The Role of <span class="gradient-text">JavaScript</span> in Modern Web Applications
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+              JavaScript is the foundational engine of modern digital experiences—transforming static markup into dynamic, reactive, and intelligent fullstack systems across browsers, cloud microservices, and edge computing.
+            </p>
+
+            <!-- Key Feature Badges Row -->
+            <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono text-slate-400">
+              <div class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span>V8 JIT Compilation</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                <span>Event Loop Engine</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
+                <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                <span>Fullstack Omnipresence</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a href="#introduction" class="btn-tech-primary px-7 py-3.5 rounded-xl font-bold text-sm flex items-center gap-2">
+                <span>Explore Topic</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+              </a>
+
+              <a href="#playground" class="btn-tech-secondary px-7 py-3.5 rounded-xl font-bold text-sm flex items-center gap-2">
+                <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.546-.237-1.077-.444-1.503-.687-.417-.238-.59-.444-.59-.75 0-.394.3-.655.856-.655.518 0 .866.196 1.139.57.147.202.261.476.324.773l1.838-.415c-.173-.699-.54-1.282-1.07-1.688-.638-.49-1.464-.72-2.38-.72-1.042 0-1.916.314-2.483.896-.549.563-.827 1.309-.827 2.115 0 .827.279 1.503.804 1.984.582.534 1.399.882 2.373 1.258.647.25 1.189.497 1.508.769.313.267.458.583.458.98 0 .49-.379.845-1.055.845-.694 0-1.127-.333-1.399-.906-.153-.321-.242-.71-.247-1.161l-1.892.296c.106.902.482 1.625 1.123 2.138.681.545 1.579.805 2.583.805 1.199 0 2.176-.328 2.782-.937.589-.594.887-1.378.887-2.264 0-.38-.066-.75-.199-1.074zm-6.273-5.289h-2.19v6.525c0 .99-.187 1.597-.563 1.954-.383.364-.982.502-1.745.502-.452 0-.901-.061-1.308-.182v-1.722c.304.097.636.146.953.146.402 0 .685-.098.815-.282.115-.162.164-.476.164-1.002V11.418h-2.19V9.6h6.064v1.818z"/></svg>
+                <span>Learn JavaScript</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Architecture Illustration Card -->
+          <div class="lg:col-span-5">
+            <div class="terminal-window p-1 bg-slate-900/90 border border-slate-700/80 shadow-2xl relative group">
+              <!-- Window Bar -->
+              <div class="terminal-header">
+                <div class="flex items-center gap-2">
+                  <span class="terminal-dot-ctrl bg-rose-500/80"></span>
+                  <span class="terminal-dot-ctrl bg-amber-500/80"></span>
+                  <span class="terminal-dot-ctrl bg-emerald-500/80"></span>
+                  <span class="text-[11px] font-mono text-slate-400 ml-2">js-v8-runtime-engine.mjs</span>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">● LIVE RUNTIME</span>
+              </div>
+
+              <!-- Engine Visualizer Diagram -->
+              <div class="p-6 space-y-4 bg-slate-950/90 font-mono text-xs">
+                
+                <!-- Architecture Component 1: Call Stack & Heap -->
+                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                  <div>
+                    <div class="text-sky-300 font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                      <span>Call Stack & Memory Heap</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-sans">LIFO execution stack + V8 dynamic memory allocation</p>
+                  </div>
+                  <span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">Single-Threaded</span>
+                </div>
+
+                <!-- Architecture Component 2: Event Loop & Microtasks -->
+                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                  <div>
+                    <div class="text-indigo-300 font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                      <span>Event Loop & Microtask Queue</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-sans">Non-blocking Promises, Async/Await & process.nextTick</p>
+                  </div>
+                  <span class="text-[10px] text-indigo-300 bg-indigo-950/60 border border-indigo-500/30 px-2 py-1 rounded">High Priority</span>
+                </div>
+
+                <!-- Architecture Component 3: Browser Web APIs / Libuv -->
+                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                  <div>
+                    <div class="text-emerald-300 font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                      <span>Web APIs & DOM Subsystem</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-sans">Fetch, WebSockets, Canvas, Web Workers & Storage</p>
+                  </div>
+                  <span class="text-[10px] text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 px-2 py-1 rounded">Concurrent</span>
+                </div>
+
+                <!-- Architecture Component 4: JIT Ignition & TurboFan -->
+                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                  <div>
+                    <div class="text-amber-300 font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                      <span>JIT Optimization Pipeline</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-sans">Ignition Interpreter &rarr; TurboFan Machine Code</p>
+                  </div>
+                  <span class="text-[10px] text-amber-300 bg-amber-950/60 border border-amber-500/30 px-2 py-1 rounded">Sub-Millisecond</span>
+                </div>
+
+                <!-- Visual status bar -->
+                <div class="pt-2 flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-800/80">
+                  <span class="text-slate-400">Execution Speed: <strong class="text-white">Near-Native C++</strong></span>
+                  <span class="text-sky-400 font-bold">100% ECMAScript Spec Compliant</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         INTRODUCTION SECTION (Two-Column Layout)
+         ========================================== -->
+    <section id="introduction" class="py-20 bg-slate-950/60 border-t border-b border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-wider">
+            <span>Executive Overview</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Understanding the Heart of the Modern Web
+          </h2>
+          <p class="text-base text-slate-400">
+            A comprehensive architectural look at what JavaScript is, why it underpins digital engineering, and how it collaborates seamlessly with HTML and CSS.
+          </p>
+        </div>
+
+        <!-- Clean Two-Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- Column 1: What JS is & Why it's Important -->
+          <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="p-3 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">What is JavaScript?</h3>
+                  <p class="text-xs text-slate-400 font-mono">ECMA-262 Standardized Programming Language</p>
+                </div>
+              </div>
+
+              <p class="text-sm text-slate-300 leading-relaxed">
+                JavaScript (frequently abbreviated as <strong>JS</strong>) is a lightweight, interpreted or Just-In-Time compiled, multi-paradigm programming language featuring first-class functions, prototype-based object orientation, and dynamic typing.
+              </p>
+
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-sky-300">Why JavaScript is Indispensable</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  While HTML structures content and CSS styles its visual aesthetics, JavaScript provides the <em>cognitive intelligence and responsive behavior</em>. Without JavaScript, websites remain static documents. With JavaScript, web portals evolve into rich, enterprise-grade desktop-class software accessible instantly inside any browser.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bulleted Highlights -->
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800 text-xs">
+                <strong class="text-white block mb-0.5">Ubiquitous Support</strong>
+                <span class="text-slate-400">Built natively into 100% of modern web browsers without plugins.</span>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800 text-xs">
+                <strong class="text-white block mb-0.5">Unified Stack</strong>
+                <span class="text-slate-400">Enables end-to-end development across frontend, backend, and DB.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: The Web Triad & How JS Works with HTML & CSS -->
+          <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="p-3 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">The Modern Web Triad</h3>
+                  <p class="text-xs text-slate-400 font-mono">HTML (Structure) + CSS (Presentation) + JS (Behavior)</p>
+                </div>
+              </div>
+
+              <!-- Visual Triad Stack -->
+              <div class="space-y-2.5">
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-7 h-7 rounded-lg bg-orange-500/20 text-orange-400 font-bold flex items-center justify-center text-xs">HTML</span>
+                    <div>
+                      <h5 class="text-xs font-bold text-white">HyperText Markup Language</h5>
+                      <p class="text-[11px] text-slate-400">Defines document semantics, forms, buttons, and content hierarchy.</p>
+                    </div>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono">Skeleton</span>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 font-bold flex items-center justify-center text-xs">CSS</span>
+                    <div>
+                      <h5 class="text-xs font-bold text-white">Cascading Style Sheets</h5>
+                      <p class="text-[11px] text-slate-400">Controls layout grids, typography, visual colors, and media queries.</p>
+                    </div>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono">Aesthetics</span>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-900 border border-amber-500/40 flex items-center justify-between bg-amber-500/5">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-xs">JS</span>
+                    <div>
+                      <h5 class="text-xs font-bold text-amber-300">JavaScript Logic Engine</h5>
+                      <p class="text-[11px] text-slate-300">Handles user events, manipulates DOM elements, calls APIs asynchronously.</p>
+                    </div>
+                  </div>
+                  <span class="text-[10px] text-amber-400 font-mono font-bold">Dynamic Engine</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-400 italic">
+              When a user interacts with a page—such as submitting an order, scrolling past an animation trigger, or toggling dark mode—JavaScript intercepts the event, executes logic, and updates the DOM in milliseconds.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         KEY FEATURES SECTION (6 Interactive Cards)
+         ========================================== -->
+    <section id="features" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <span>Core Capabilities</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Key Pillars of Modern JavaScript
+          </h2>
+          <p class="text-base text-slate-400">
+            Six architectural capabilities that empower developers to engineer responsive, robust, and intuitive user experiences.
+          </p>
+        </div>
+
+        <!-- 6 Feature Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Feature 1: Interactivity -->
+          <div class="feature-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-3 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
+              </div>
+              <span class="text-xs font-mono text-sky-400 bg-sky-950/60 px-2 py-0.5 rounded border border-sky-500/30">01 • REACTIVITY</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Interactivity</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Powers instant user feedback, contextual dropdowns, drag-and-drop file uploaders, interactive dashboards, modal dialogs, and smooth micro-animations.
+            </p>
+            <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-800 flex items-center justify-between">
+              <span>Impact: Zero page reload</span>
+              <span class="text-sky-400">UX Delight</span>
+            </div>
+          </div>
+
+          <!-- Feature 2: Dynamic Content -->
+          <div class="feature-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-3 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+              <span class="text-xs font-mono text-indigo-400 bg-indigo-950/60 px-2 py-0.5 rounded border border-indigo-500/30">02 • REAL-TIME</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Dynamic Content</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Enables real-time data binding, dynamic feed rendering, live chat updates, and seamless content refreshes without full-page server round-trips.
+            </p>
+            <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-800 flex items-center justify-between">
+              <span>Mechanism: State Reconciliation</span>
+              <span class="text-indigo-400">Virtual DOM</span>
+            </div>
+          </div>
+
+          <!-- Feature 3: Event Handling -->
+          <div class="feature-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">03 • DISPATCH</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Event Handling</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Captures and dispatches user actions—including clicks, keyboard keystrokes, gestures, pointer motions, resize thresholds, and custom event buses.
+            </p>
+            <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-800 flex items-center justify-between">
+              <span>Standard: addEventListener()</span>
+              <span class="text-emerald-400">Event Delegation</span>
+            </div>
+          </div>
+
+          <!-- Feature 4: DOM Manipulation -->
+          <div class="feature-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              </div>
+              <span class="text-xs font-mono text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30">04 • DOCUMENT TREE</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">DOM Manipulation</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Directly queries, updates, appends, and removes HTML elements and CSS rules in real-time, modifying the Document Object Model on the fly.
+            </p>
+            <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-800 flex items-center justify-between">
+              <span>API: querySelector / classList</span>
+              <span class="text-amber-400">Direct Tree Access</span>
+            </div>
+          </div>
+
+          <!-- Feature 5: API Integration -->
+          <div class="feature-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <span class="text-xs font-mono text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/30">05 • NETWORKING</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">API Integration</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Seamlessly transmits and consumes data across REST endpoints, GraphQL schemas, WebSockets, Server-Sent Events, and WebRTC peer streams.
+            </p>
+            <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-800 flex items-center justify-between">
+              <span>Protocols: HTTP/2, HTTP/3, WSS</span>
+              <span class="text-cyan-400">JSON Exchange</span>
+            </div>
+          </div>
+
+          <!-- Feature 6: Asynchronous Programming -->
+          <div class="feature-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <span class="text-xs font-mono text-rose-400 bg-rose-950/60 px-2 py-0.5 rounded border border-rose-500/30">06 • CONCURRENCY</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Asynchronous Logic</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Executes heavy I/O operations without freezing the UI thread using Promises, async/await, callback queues, and Web Worker thread pools.
+            </p>
+            <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-800 flex items-center justify-between">
+              <span>Engine: Non-blocking I/O</span>
+              <span class="text-rose-400">60+ FPS UI</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         JAVASCRIPT IN MODERN WEB APPLICATIONS (Applications Showcase)
+         ========================================== -->
+    <section id="applications" class="py-24 bg-slate-950/80 border-t border-b border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">
+            <span>Real-World Implementation</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            JavaScript in Modern Web Applications
+          </h2>
+          <p class="text-base text-slate-400">
+            From high-frequency financial dashboards to single-page applications, explore how enterprise platforms leverage JavaScript.
+          </p>
+        </div>
+
+        <!-- Application Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- App 1: Interactive Websites -->
+          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Interactive Websites</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Powers responsive carousels, contextual mega-menus, dark/light theme persistence, scroll-triggered reveal animations, and dynamic hero banners.
+              </p>
+            </div>
+            <span class="text-[11px] font-mono text-sky-400 bg-slate-950 p-2 rounded border border-slate-800">Use: SaaS Portals & Content Hubs</span>
+          </div>
+
+          <!-- App 2: SPAs -->
+          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Single Page Applications (SPAs)</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Loads a single HTML document and dynamically rewrites views via client-side routing (React Router, Vue Router) without triggering browser page reloads.
+              </p>
+            </div>
+            <span class="text-[11px] font-mono text-cyan-400 bg-slate-950 p-2 rounded border border-slate-800">Use: Gmail, Netflix, Spotify Web</span>
+          </div>
+
+          <!-- App 3: E-commerce -->
+          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">E-Commerce Platforms</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Drives instant cart recalculations, dynamic product filtering, live inventory badges, Stripe/PayPal payment gateway integrations, and one-click checkout.
+              </p>
+            </div>
+            <span class="text-[11px] font-mono text-emerald-400 bg-slate-950 p-2 rounded border border-slate-800">Use: Amazon, Shopify Stores</span>
+          </div>
+
+          <!-- App 4: Real-time Apps -->
+          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-indigo-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Real-Time Applications</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Maintains persistent bi-directional WebSocket connections for team collaboration tools, live chat rooms, online multiplayer gaming, and stock tickers.
+              </p>
+            </div>
+            <span class="text-[11px] font-mono text-indigo-400 bg-slate-950 p-2 rounded border border-slate-800">Use: Slack, Figma, Discord Web</span>
+          </div>
+
+          <!-- App 5: Web Dashboards -->
+          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Enterprise Dashboards</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Renders interactive SVG/Canvas charts (Chart.js, D3.js), server telemetry streams, geospatial maps, and data sorting tables in real-time.
+              </p>
+            </div>
+            <span class="text-[11px] font-mono text-amber-400 bg-slate-950 p-2 rounded border border-slate-800">Use: AWS Console, Datadog, Stripe</span>
+          </div>
+
+          <!-- App 6: Dynamic Forms & Animations -->
+          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-rose-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Smart Forms & UI Animations</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Executes instant inline form validation, password strength meters, multi-step wizards, and physics-based fluid layout transitions (GSAP, Framer).
+              </p>
+            </div>
+            <span class="text-[11px] font-mono text-rose-400 bg-slate-950 p-2 rounded border border-slate-800">Use: Onboarding & FinTech Portals</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         TECHNOLOGIES AND FRAMEWORKS SECTION
+         ========================================== -->
+    <section id="frameworks" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
+            <span>Ecosystem Matrix</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Technologies & Modern Frameworks
+          </h2>
+          <p class="text-base text-slate-400">
+            Discover the leading enterprise frameworks and runtimes that power the modern fullstack JavaScript landscape.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+          <button class="framework-filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-sky-500 text-white border border-sky-400 transition-all duration-200" data-filter="all">
+            All Technologies (6)
+          </button>
+          <button class="framework-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-600 transition-all duration-200" data-filter="core">
+            Core Language
+          </button>
+          <button class="framework-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-600 transition-all duration-200" data-filter="frontend">
+            Frontend Frameworks
+          </button>
+          <button class="framework-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-600 transition-all duration-200" data-filter="backend">
+            Backend & Runtimes
+          </button>
+        </div>
+
+        <!-- Dynamically Populated Grid via FrameworksView.js -->
+        <div id="frameworks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Fallback placeholder while JS boots -->
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 text-center text-slate-400 col-span-3">
+            Loading JavaScript Framework Specifications...
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         ADVANTAGES SECTION
+         ========================================== -->
+    <section id="advantages" class="py-24 bg-slate-950/80 border-t border-b border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider">
+            <span>Competitive Edge</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Major Advantages of JavaScript
+          </h2>
+          <p class="text-base text-slate-400">
+            Why leading tech giants and startups standardize their web stacks on JavaScript and TypeScript.
+          </p>
+        </div>
+
+        <!-- 6 Advantage Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Adv 1: Fast Execution -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Fast Execution Speed</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Executes directly inside client hardware without network compile latency. High-performance JIT compilers (V8, SpiderMonkey) optimize hotspot bytecode on the fly into native machine code.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-sky-400 flex items-center gap-2">
+              <span>● Sub-millisecond Execution</span>
+            </div>
+          </div>
+
+          <!-- Adv 2: Cross-Platform -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Universal Cross-Platform</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                A single codebase can target modern Web Browsers, iOS & Android via React Native/Capacitor, Desktop Apps via Electron, and High-throughput Cloud Backends via Node.js.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-indigo-400 flex items-center gap-2">
+              <span>● Write Once, Deploy Everywhere</span>
+            </div>
+          </div>
+
+          <!-- Adv 3: Rich UX -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Rich & Fluid User Experience</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Enables optimistic UI rendering, instantaneous search filtering, seamless drag-and-drop mechanics, and flicker-free page transitions that match native OS desktop performance.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 flex items-center gap-2">
+              <span>● 60 FPS Fluid Interactions</span>
+            </div>
+          </div>
+
+          <!-- Adv 4: Massive Community -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Massive Global Ecosystem</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Backed by npm—the largest software repository on earth containing over 2.1 million open-source libraries, extensive enterprise documentation, and millions of active engineers.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-amber-400 flex items-center gap-2">
+              <span>● 2M+ npm Open-Source Packages</span>
+            </div>
+          </div>
+
+          <!-- Adv 5: Easy Integration -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Frictionless API & Cloud Integration</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                JSON (JavaScript Object Notation) is the native lingua franca of the internet. Integrates natively with RESTful microservices, GraphQL gateways, and serverless edge functions.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-cyan-400 flex items-center gap-2">
+              <span>● Native JSON Serialization</span>
+            </div>
+          </div>
+
+          <!-- Adv 6: Modern Frameworks -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Modern Framework Standardization</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Continuous ECMAScript updates ensure reliable language features, strict module encapsulation, asynchronous streams, and seamless interoperability with Next.js, Remix, and Vite.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-rose-400 flex items-center gap-2">
+              <span>● Annual ECMAScript Release Cycle</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         INTERACTIVE CODE EXAMPLE & LIVE SANDBOX
+         ========================================== -->
+    <section id="playground" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <span>Interactive Laboratory</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Live JavaScript Execution & DOM Mutator
+          </h2>
+          <p class="text-base text-slate-400">
+            Witness how JavaScript executes code in real-time. Choose a preset or edit the code directly, then click <strong>“Try It”</strong> to see the DOM change instantly!
+          </p>
+        </div>
+
+        <!-- Sandbox Presets Toolbar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-6 p-3 rounded-2xl bg-slate-900/90 border border-slate-800">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mr-2 hidden sm:inline">Presets:</span>
+            <button class="playground-tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-sky-500/20 text-sky-400 border border-sky-500/40 transition-all" data-preset="dom">
+              1. DOM Mutator
+            </button>
+            <button class="playground-tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-600 transition-all" data-preset="counter">
+              2. Event Counter
+            </button>
+            <button class="playground-tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-600 transition-all" data-preset="asyncApi">
+              3. Async API Fetch
+            </button>
+            <button class="playground-tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-600 transition-all" data-preset="elements">
+              4. UI Generator
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span id="current-preset-badge" class="px-2.5 py-1 text-[11px] font-mono rounded bg-slate-800 text-sky-300 border border-slate-700">DOM Manipulation</span>
+          </div>
+        </div>
+
+        <!-- Main Sandbox Container (Code Editor + Live Output Frame) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          
+          <!-- Left Column: Code Editor Window (7 cols) -->
+          <div class="lg:col-span-7 code-card terminal-window flex flex-col justify-between">
+            
+            <!-- Editor Top Bar -->
+            <div class="terminal-header">
+              <div class="flex items-center gap-2">
+                <span class="terminal-dot-ctrl bg-rose-500"></span>
+                <span class="terminal-dot-ctrl bg-amber-500"></span>
+                <span class="terminal-dot-ctrl bg-emerald-500"></span>
+                <span class="text-xs font-mono text-slate-300 ml-2 font-semibold">script.js (Interactive Editor)</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button class="copy-code-btn px-2.5 py-1 text-[11px] font-mono rounded bg-slate-800 text-slate-300 hover:text-white border border-slate-700 flex items-center gap-1.5 transition-colors">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Code Textarea -->
+            <div class="p-4 bg-[#080d1a] flex-grow">
+              <textarea id="playground-code" class="code-textarea w-full h-[320px] font-mono text-xs text-sky-300 bg-transparent border-0 focus:ring-0 focus:outline-none" spellcheck="false"></textarea>
+            </div>
+
+            <!-- Editor Action Bar -->
+            <div class="p-4 bg-slate-900 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-400">Status: <span class="text-emerald-400">Ready to execute</span></span>
+              
+              <div class="flex items-center gap-3">
+                <button id="playground-reset-btn" class="px-3.5 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:text-white hover:border-slate-600 transition-colors">
+                  Reset State
+                </button>
+
+                <button id="playground-run-btn" class="btn-tech-primary px-5 py-2 text-xs font-bold rounded-lg flex items-center gap-2 shadow-lg shadow-sky-500/20">
+                  <svg class="w-4 h-4 text-amber-300" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  <span>Try It (Run Code)</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Live DOM Preview & Console Output (5 cols) -->
+          <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+            
+            <!-- Live Preview Container -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Live Rendered DOM Target</span>
+                </h4>
+                <span class="text-[11px] font-mono text-slate-500">document.body viewport</span>
+              </div>
+
+              <!-- Preview Frame -->
+              <div id="playground-preview" class="transition-all duration-300 min-h-[160px]">
+                <!-- Populated via PlaygroundView.js -->
+              </div>
+            </div>
+
+            <!-- Terminal Output Console -->
+            <div class="terminal-window flex-grow flex flex-col justify-between">
+              <div class="terminal-header">
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <span class="text-xs font-mono text-slate-300 font-semibold">DevScript Console Log</span>
+                </div>
+                <button id="playground-clear-logs" class="text-[10px] font-mono text-slate-400 hover:text-white underline">Clear Log</button>
+              </div>
+
+              <div id="playground-console" class="p-3.5 bg-[#03060c] min-h-[140px] max-h-[180px] overflow-y-auto space-y-1">
+                <!-- Log entries added dynamically -->
+                <div class="text-xs text-slate-500 font-mono italic">Console initialized. Click "Try It" to see execution events.</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         COURSE CURRICULUM SECTION (Full Course Page Requirement)
+         ========================================== -->
+    <section id="curriculum" class="py-24 bg-slate-950/80 border-t border-b border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-wider">
+            <span>Structured Learning Pathway</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Full Course Curriculum & Engineering Syllabus
+          </h2>
+          <p class="text-base text-slate-400">
+            A comprehensive 4-module mastery syllabus designed to transform aspiring engineers into proficient fullstack JavaScript architects.
+          </p>
+        </div>
+
+        <!-- Curriculum Control Toolbar & Live Progress -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 mb-8 space-y-4">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Course Completion Progress</span>
+                <span id="curriculum-stats-badge" class="px-2 py-0.5 text-[11px] font-mono rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">0/24 Verified</span>
+              </h3>
+              <p id="curriculum-progress-text" class="text-xs text-slate-400 mt-0.5">0% Complete (0/24 Lessons)</p>
+            </div>
+
+            <!-- Search filter -->
+            <div class="w-full sm:w-72">
+              <input id="curriculum-search" type="text" placeholder="Search topics (e.g. DOM, V8, Async, React)..." class="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-950 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500">
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="w-full bg-slate-950 rounded-full h-2.5 overflow-hidden border border-slate-800">
+            <div id="curriculum-progress-fill" class="bg-gradient-to-r from-sky-500 via-indigo-500 to-emerald-400 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Curriculum Modules Accordion Container -->
+        <div id="curriculum-accordion" class="space-y-4">
+          <!-- Populated by CourseView.js -->
+        </div>
+
+        <!-- Syllabus CTA Footer -->
+        <div class="mt-12 p-8 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-sky-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div class="space-y-2 text-center md:text-left">
+            <h3 class="text-xl font-bold text-white">Ready for Enterprise Certification?</h3>
+            <p class="text-sm text-slate-300 max-w-xl">
+              Complete all 4 modules, finish the interactive code exercises, and download your comprehensive JavaScript Architecture Syllabus & Reference Guide.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="course.html" class="btn-tech-secondary px-5 py-3 rounded-xl text-xs font-bold">Explore Full Course</a>
+            <button class="enroll-modal-btn btn-tech-primary px-6 py-3 rounded-xl text-xs font-bold shadow-lg shadow-sky-500/20">Download Syllabus</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         CONCLUSION SECTION
+         ========================================== -->
+    <section id="conclusion" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-4xl mx-auto glass-panel p-8 sm:p-12 rounded-3xl border border-sky-500/30 relative overflow-hidden shadow-2xl">
+          <!-- Ambient gradient background -->
+          <div class="absolute -right-20 -top-20 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -bottom-20 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 space-y-6 text-center sm:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+              <span>Executive Synthesis</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+              Conclusion: JavaScript as the Universal Engine of Modern Web Engineering
+            </h2>
+
+            <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p>
+                JavaScript has journeyed through a remarkable evolution—from a lightweight scripting utility created in 10 days in 1995 to the <strong>most widely adopted, mission-critical programming ecosystem in computing history</strong>.
+              </p>
+              <p>
+                By providing dynamic client-side interactivity, robust asynchronous networking, fullstack server execution via Node.js, and standardized compilation pipelines, JavaScript stands as the irreplaceable backbone of contemporary digital software. Whether building responsive consumer interfaces, cloud microservices, real-time collaboration suites, or AI-integrated web tools, mastering JavaScript is fundamental to modern engineering excellence.
+              </p>
+            </div>
+
+            <!-- Key Summary Takeaways Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                <span class="text-xs font-bold text-sky-400 block mb-1">01 • Pervasiveness</span>
+                <p class="text-xs text-slate-400">Native in 100% of browsers with zero plug-in prerequisites.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                <span class="text-xs font-bold text-indigo-400 block mb-1">02 • Speed & Scalability</span>
+                <p class="text-xs text-slate-400">JIT-optimized V8 engines and non-blocking event loops.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                <span class="text-xs font-bold text-emerald-400 block mb-1">03 • Future-Proof</span>
+                <p class="text-xs text-slate-400">Continual evolution through TC39 and web standards.</p>
+              </div>
+            </div>
+
+            <!-- Conclusion CTA -->
+            <div class="pt-6 flex flex-wrap items-center gap-4 justify-center sm:justify-start">
+              <button class="enroll-modal-btn btn-tech-primary px-8 py-3.5 rounded-xl font-bold text-xs tracking-wide uppercase">
+                Enroll in Masterclass
+              </button>
+              <a href="#playground" class="btn-tech-secondary px-6 py-3.5 rounded-xl font-bold text-xs">
+                Launch Code Laboratory
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================
+       ENTERPRISE FOOTER
+       ========================================== -->
+  <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        
+        <!-- Brand Info (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center font-bold text-slate-950 shadow-md">
+              <span class="font-mono text-base font-extrabold">JS</span>
+            </div>
+            <div>
+              <span class="text-base font-bold text-white tracking-tight">DevScript Enterprise</span>
+              <p class="text-[11px] text-slate-500">Modern Web Applications Architecture</p>
+            </div>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            An advanced educational platform exploring the critical role of JavaScript, modern frameworks, DOM manipulation, and asynchronous architecture in web software engineering.
+          </p>
+          <div class="flex items-center gap-2 text-[11px] text-emerald-400 font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>All Educational Services Operational • v2.4.0</span>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#hero" class="hover:text-sky-400 transition-colors">Home Portal</a></li>
+            <li><a href="#introduction" class="hover:text-sky-400 transition-colors">Introduction</a></li>
+            <li><a href="#features" class="hover:text-sky-400 transition-colors">Key Features</a></li>
+            <li><a href="#applications" class="hover:text-sky-400 transition-colors">Web Applications</a></li>
+            <li><a href="#advantages" class="hover:text-sky-400 transition-colors">Advantages Matrix</a></li>
+            <li><a href="#conclusion" class="hover:text-sky-400 transition-colors">Conclusion Summary</a></li>
+          </ul>
+        </div>
+
+        <!-- Technologies & Frameworks -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Technologies</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#frameworks" class="hover:text-sky-400 transition-colors">ECMAScript 2024 Core</a></li>
+            <li><a href="#frameworks" class="hover:text-sky-400 transition-colors">React.js & Virtual DOM</a></li>
+            <li><a href="#frameworks" class="hover:text-sky-400 transition-colors">Angular Enterprise MVC</a></li>
+            <li><a href="#frameworks" class="hover:text-sky-400 transition-colors">Vue.js Composition API</a></li>
+            <li><a href="#frameworks" class="hover:text-sky-400 transition-colors">Node.js Server Runtime</a></li>
+            <li><a href="#frameworks" class="hover:text-sky-400 transition-colors">Express.js Microservices</a></li>
+          </ul>
+        </div>
+
+        <!-- Learning & Resources -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Course Hub</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="course.html" class="hover:text-sky-400 transition-colors">Curriculum Syllabus</a></li>
+            <li><a href="playground.html" class="hover:text-sky-400 transition-colors">Interactive Code Sandbox</a></li>
+            <li><a href="#curriculum" class="hover:text-sky-400 transition-colors">Progress Tracker</a></li>
+            <li><a href="#" class="enroll-modal-btn hover:text-sky-400 transition-colors">Download PDF Materials</a></li>
+            <li><a href="#" class="enroll-modal-btn hover:text-sky-400 transition-colors">Certification Status</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <p>© 2026 DevScript Enterprise. Designed for High-Performance Educational Portals. All Rights Reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-400">Accessibility Standards</a>
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Education</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       ENROLLMENT / SYLLABUS MODAL DIALOG
+       ========================================== -->
+  <div id="enroll-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 max-w-md w-full rounded-2xl p-6 shadow-2xl relative space-y-5 animate-float">
+      
+      <!-- Close Button -->
+      <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-800 border border-slate-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="flex items-center gap-3">
+        <div class="p-3 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Access Course Resources</h3>
+          <p class="text-xs text-slate-400">Get instant access to syllabus & code repositories</p>
+        </div>
+      </div>
+
+      <form id="enroll-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5">Full Name</label>
+          <input type="text" required placeholder="e.g. Alex Henderson" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5">University / Corporate Email</label>
+          <input type="email" required placeholder="alex@enterprise.dev" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5">Primary Interest Track</label>
+          <select class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-xs text-slate-300 focus:outline-none focus:border-sky-500">
+            <option>Fullstack JavaScript Architecture</option>
+            <option>Advanced DOM & Browser Internals</option>
+            <option>React / Next.js Enterprise Mastery</option>
+            <option>Node.js & Asynchronous Systems</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-tech-primary w-full py-3 rounded-xl text-xs font-bold uppercase tracking-wider">
+          Confirm & Download Syllabus
+        </button>
+      </form>
+
+      <p class="text-[10px] text-slate-500 text-center">
+        🔒 100% Secure. Educational materials provided under open academic license.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- MVC Architecture Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/models/CourseModel.js"></script>
+  <script src="assets/js/models/PlaygroundModel.js"></script>
+  <script src="assets/js/views/NavbarView.js"></script>
+  <script src="assets/js/views/FrameworksView.js"></script>
+  <script src="assets/js/views/PlaygroundView.js"></script>
+  <script src="assets/js/views/CourseView.js"></script>
+  <script src="assets/js/controllers/AppController.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
