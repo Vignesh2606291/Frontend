@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 10%;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 35px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+section {
+    padding: 40px 10%;
+    text-align: center;
+}
+
+
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: lightgray;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    background-color: lightgray;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+}
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+@media (max-width: 992px) {
+
+    body {
+        background-color: lightblue;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .project {
+        width: 45%;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    body {
+        background-color: lightgreen;
+    }
+
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-text h2 {
+        font-size: 25px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
