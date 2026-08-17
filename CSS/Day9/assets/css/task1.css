@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login {
+    background-color: blue;
+    color: white;
+}
+
+.login:hover {
+    background-color: lightblue;
+    color: black;
+    transform: scale(1.1);
+}
+
+.register {
+    background-color: green;
+    color: white;
+}
+
+.register:hover {
+    background-color: lightgreen;
+    color: black;
+    transform: scale(1.1);
+}
+
+.submit {
+    background-color: blue;
+    color: white;
+}
+
+.submit:hover {
+    background-color: lightblue;
+    color: black;
+    transform: scale(1.1);
+}
+
+.save {
+    background-color: green;
+    color: white;
+}
+
+.save:hover {
+    background-color: lightgreen;
+    color: black;
+    transform: scale(1.1);
+}
+
+.delete {
+   background-color: blue;
+    color: white;
+}
+
+.delete:hover {
+    background-color: lightblue;
+    color: black;
+    transform: scale(1.1);
+}

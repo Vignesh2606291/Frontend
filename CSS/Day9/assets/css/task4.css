@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: lightgray;
+    padding: 50px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px gray;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.google {
+    color: blue;
+}
+
+.microsoft {
+    color: red;
+}
+
+.apple {
+    color: black;
+}
+
+.amazon {
+    color: orange;
+}
+
+.tesla {
+    color: red;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
