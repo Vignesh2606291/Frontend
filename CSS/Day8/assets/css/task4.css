@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+    padding:50px;
+}
+
+h1{
+    margin:20px;
+    color:#333;
+}
+
+h1::before{
+    content:"⭐ ";
+    color:gold;
+}
+
+h1::after{
+    content:" ⭐";
+    color:gold;
+}

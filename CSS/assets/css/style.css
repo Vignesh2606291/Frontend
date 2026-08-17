@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(1, 1, 36);
+}
+
+a{
+    text-decoration: none;
+    padding: 30px;
+}
+
+header{
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.topics{
+    border: solid white 5px;
+    background-color: orange;
+    color: white;
+    border-radius: 30px;
+    font-size: 60px;
+    transition:0.3s;
+    cursor: pointer;
+}
+
+.topics:hover{
+    transform: translateY(-8px);
+}
+
+
+.flex{
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.tablehead{
+    background-color: orange;
+    color: white;
+}
+
+.tablebody{
+    background-color: rgb(209, 165, 83);
+}

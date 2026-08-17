@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+p{
+    width:80%;
+    margin:20px auto;
+    padding:15px;
+    background:#fff;
+    border-radius:8px;
+    line-height:1.8;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+p::first-letter{
+    font-size:40px;
+    font-weight:bold;
+    color:red;
+}
+
+p::first-line{
+    color:blue;
+    font-weight:bold;
+}
+
+p::selection{
+    background:yellow;
+    color:black;
+}
