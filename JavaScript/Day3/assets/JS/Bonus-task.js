@@ -1,4 +1,8 @@
 let number=10
-console.log(10%8);
-console.log(10===8);
+
+if(number * 2  === 20){
+    console.log("Even");
+}else{
+    console.log("Odd"); 
+}
 
