@@ -11,8 +11,8 @@ for(i=0;i<employee.length;i++)
 {
     if(employee[i].Salary>40000)
     {
-        console.log(employee[i].Name);
-        console.log(employee[i].Salary);
+        console.log(employee[i]);
+        
         
     }
 }
