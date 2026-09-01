@@ -1,0 +1,410 @@
+JAVASCRIPT TEST
+
+Question 1
+
+Write a program to print all even numbers from 1 to 50 using a for loop in a single line.
+
+Answer:
+
+let i;
+
+for(i = 1; i <= 50; i++)
+{
+if(i % 2 == 0)
+{
+process.stdout.write(i + " ");
+}
+}
+
+Output:
+
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50
+
+Question 2
+
+Write a program to find the factorial of a given number using a while loop.
+
+Answer:
+
+let n = 5;
+let fact = 1;
+
+while(n > 0)
+{
+fact = fact * n;
+n--;
+}
+
+console.log(fact);
+
+Output:
+
+120
+
+Question 3
+
+Write a program to print numbers from 20 to 1 using a do...while loop.
+
+Answer:
+
+let i = 20;
+
+do
+{
+console.log(i);
+i--;
+}
+while(i >= 1);
+
+Output:
+
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+Question 4
+
+Write a program to reverse the string "JavaScript" using a loop without using reverse().
+
+Answer:
+
+let str = "JavaScript";
+let result = "";
+
+for(let i = str.length - 1; i >= 0; i--)
+{
+result = result + str[i];
+}
+
+console.log(result);
+
+Output:
+
+tpircSavaJ
+
+Question 5
+
+Given the array, find the highest number using a loop.
+
+Answer:
+
+const numbers = [45, 12, 89, 34, 67, 90, 23];
+
+let highest = numbers[0];
+
+for(let i = 0; i < numbers.length; i++)
+{
+if(numbers[i] > highest)
+{
+highest = numbers[i];
+}
+}
+
+console.log(highest);
+
+Output:
+
+90
+
+Question 6
+
+Given the array, print only the odd numbers and find their total.
+
+Answer:
+
+const numbers = [10, 15, 20, 25, 30, 35, 40];
+
+let total = 0;
+
+for(let i = 0; i < numbers.length; i++)
+{
+if(numbers[i] % 2 != 0)
+{
+console.log(numbers[i]);
+total = total + numbers[i];
+}
+}
+
+console.log("Total =", total);
+
+Output:
+
+15
+25
+35
+Total = 75
+
+Question 7
+
+Create an object called student with name, age, course and mark. Access and display all values.
+
+Answer:
+
+const student = {
+name: "Ravi",
+age: 22,
+course: "JavaScript",
+mark: 85
+};
+
+console.log(student.name);
+console.log(student.age);
+console.log(student.course);
+console.log(student.mark);
+
+Output:
+
+Ravi
+22
+JavaScript
+85
+
+Question 8
+
+Given the array of students, display only the students who scored more than 75.
+
+Answer:
+
+const students = [
+{name: "Arun", mark: 85},
+{name: "Bala", mark: 65},
+{name: "Charan", mark: 90},
+{name: "Deepak", mark: 70}
+];
+
+for(let i = 0; i < students.length; i++)
+{
+if(students[i].mark > 75)
+{
+console.log(students[i].name);
+}
+}
+
+Output:
+
+Arun
+Charan
+
+Question 9
+
+Create three different functions to calculate the square of a number.
+
+Answer:
+
+function square1(n)
+{
+return n * n;
+}
+
+console.log(square1(5));
+
+const square2 = function(n)
+{
+return n * n;
+};
+
+console.log(square2(5));
+
+const square3 = (n) =>
+{
+return n * n;
+};
+
+console.log(square3(5));
+
+Output:
+
+25
+25
+25
+
+Question 10
+
+Create a function that accepts name and age as parameters and returns a formatted sentence using a template literal.
+
+Answer:
+
+function details(name, age)
+{
+return `My name is ${name} and I am ${age} years old.`;
+}
+
+console.log(details("Ravi", 25));
+
+Output:
+
+My name is Ravi and I am 25 years old.
+
+Question 11
+
+Write a program demonstrating the difference between var, let and const inside a block scope.
+
+Answer:
+
+{
+var a = 10;
+let b = 20;
+const c = 30;
+
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+
+}
+
+console.log(a);
+
+Output:
+
+10
+20
+30
+10
+
+Question 12
+
+Predict the output and explain the reason.
+
+Answer:
+
+console.log(a);
+
+var a = 10;
+
+Output:
+
+undefined
+
+Reason:
+
+var is hoisted.
+
+If we use let:
+
+console.log(a);
+
+let a = 10;
+
+Output:
+
+ReferenceError: Cannot access 'a' before initialization
+
+Reason:
+
+let cannot be accessed before its declaration.
+
+Question 13
+
+Extract name and course using destructuring.
+
+Answer:
+
+const student = {
+name: "Ravi",
+age: 22,
+course: "JavaScript"
+};
+
+const {name, course} = student;
+
+console.log(name);
+console.log(course);
+
+Output:
+
+Ravi
+JavaScript
+
+Question 14
+
+Create an arrow function using a rest parameter that accepts multiple numbers and returns their total.
+
+Answer:
+
+const total = (...numbers) =>
+{
+let sum = 0;
+
+
+for(let i = 0; i < numbers.length; i++)
+{
+    sum = sum + numbers[i];
+}
+
+return sum;
+
+};
+
+console.log(total(10, 20, 30, 40));
+
+Output:
+
+100
+
+Question 15
+
+Display each user's name, city and total marks. If the city does not exist, display "City Not Available".
+
+Answer:
+
+const users = [
+{
+name: "Ravi",
+marks: [80, 90, 85],
+address: {
+city: "Chennai"
+}
+},
+{
+name: "Kumar",
+marks: [60, 70, 75]
+}
+];
+
+for(let user of users)
+{
+let total = 0;
+
+
+for(let mark of user.marks)
+{
+    total = total + mark;
+}
+
+let city = user.address?.city ?? "City Not Available";
+
+console.log("Name:", user.name);
+console.log("City:", city);
+console.log("Total:", total);
+
+
+}
+
+Output:
+
+Name: Ravi
+City: Chennai
+Total: 255
+
+Name: Kumar
+City: City Not Available
+Total: 205

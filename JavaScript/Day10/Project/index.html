@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern, beginner-friendly JavaScript Learning Platform to master core concepts and practice logical programming.">
+  <meta name="author" content="JavaScript Learning Platform">
+  <title>JavaScript Learning Platform | Learn JS Step by Step</title>
+
+  <!-- Google Fonts: Poppins (UI) & Fira Code (Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+  <!-- ======================================================================
+       1. Navigation Bar
+       ====================================================================== -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="#home">
+        <span class="brand-icon">JS</span>
+        <span>JavaScript Platform</span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#topics">JavaScript Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#programs">Logical Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#practice">Practice</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </ul>
+
+        <!-- Action Button -->
+        <div class="d-flex align-items-center gap-2">
+          <a href="#practice" class="btn btn-nav-action">
+            <i class="bi bi-code-slash me-1"></i> Start Practice
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       2. Hero Section
+       ====================================================================== -->
+  <header id="home" class="hero-section">
+    <!-- Ambient Glow Blobs -->
+    <div class="hero-glow-bg"></div>
+    <div class="hero-glow-bg-2"></div>
+
+    <div class="container hero-content">
+      <div class="row align-items-center gy-5">
+        <!-- Hero Text & CTA -->
+        <div class="col-lg-6">
+          <div class="hero-badge">
+            <i class="bi bi-lightning-charge-fill"></i> Modern ES6+ & Hands-on Coding
+          </div>
+          <h1 class="hero-title">
+            Learn JavaScript <span class="highlight">Step by Step</span>
+          </h1>
+          <p class="hero-description">
+            A beginner-friendly platform to learn JavaScript concepts and practice logical programming.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#topics" class="btn btn-hero-primary">
+              <i class="bi bi-book-half"></i> Start Learning
+            </a>
+            <a href="#programs" class="btn btn-hero-secondary">
+              <i class="bi bi-terminal"></i> Explore Programs
+            </a>
+          </div>
+
+          <!-- Quick Statistics -->
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <h4>10+</h4>
+              <p>Core Topics</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>10+</h4>
+              <p>Logical Programs</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>100%</h4>
+              <p>Interactive & Free</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Code Window Preview -->
+        <div class="col-lg-6">
+          <div class="hero-code-window">
+            <div class="window-header">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="window-title">main.js - ECMAScript 2024</span>
+              <span class="hero-live-badge"><i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i> Live Preview</span>
+            </div>
+            <div class="window-body">
+              <pre class="mb-0"><code class="code-font"><span class="code-comment">// Master JavaScript Fundamentals with ease!</span>
+<span class="code-keyword">const</span> <span class="code-var">learner</span> = {
+  name: <span class="code-string">"Student"</span>,
+  skillLevel: <span class="code-string">"Beginner to Pro"</span>,
+  readyToCode: <span class="code-keyword">true</span>
+};
+
+<span class="code-keyword">function</span> <span class="code-fn">embarkJourney</span>(<span class="code-var">user</span>) {
+  <span class="code-keyword">if</span> (<span class="code-var">user</span>.readyToCode) {
+    <span class="code-keyword">return</span> <span class="code-string">\`🚀 Hello \${user.name}, welcome to JS Mastery!\`</span>;
+  }
+  <span class="code-keyword">return</span> <span class="code-string">"Start learning today!"</span>;
+}
+
+<span class="code-var">console</span>.<span class="code-fn">log</span>(<span class="code-fn">embarkJourney</span>(<span class="code-var">learner</span>));</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       3. Features Section
+       ====================================================================== -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="bi bi-stars"></i> Key Highlights</span>
+        <h2 class="section-title">Why Learn With Us?</h2>
+        <p class="section-subtitle">Engineered specifically for students and beginners to build a rock-solid foundation in modern programming.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1: Easy Learning -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-blue">
+              <i class="bi bi-lightbulb-fill"></i>
+            </div>
+            <h3 class="feature-title">Easy Learning</h3>
+            <p class="feature-desc">Step-by-step breakdown of complex programming concepts into bite-sized, digestible lessons.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2: Simple Examples -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-yellow">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h3 class="feature-title">Simple Examples</h3>
+            <p class="feature-desc">Real-world code snippets with line-by-line syntax explanations and clear expected output results.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Logical Programs -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-green">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <h3 class="feature-title">Logical Programs</h3>
+            <p class="feature-desc">10 essential coding algorithms with live dynamic inputs to sharpen algorithmic thinking.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4: Practice Exercises -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-purple">
+              <i class="bi bi-laptop-fill"></i>
+            </div>
+            <h3 class="feature-title">Practice Exercises</h3>
+            <p class="feature-desc">Interactive in-browser code editor with instant test-runner feedback, error messages, and hints.</p>
+          </div>
+        </div>
+
+        <!-- Feature 5: Beginner Friendly -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-red">
+              <i class="bi bi-emoji-smile-fill"></i>
+            </div>
+            <h3 class="feature-title">Beginner Friendly</h3>
+            <p class="feature-desc">Zero prior programming knowledge required. Designed with clear language and visual aids.</p>
+          </div>
+        </div>
+
+        <!-- Feature 6: Responsive Design -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-cyan">
+              <i class="bi bi-phone-fill"></i>
+            </div>
+            <h3 class="feature-title">Responsive Design</h3>
+            <p class="feature-desc">Seamlessly adapted for mobile phones, tablets, laptops, and ultra-wide desktop monitors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       4. JavaScript Topics Section (10 Cards)
+       ====================================================================== -->
+  <section id="topics" class="topics-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge badge-js"><i class="bi bi-journal-code"></i> Curriculum</span>
+        <h2 class="section-title">JavaScript Core Topics</h2>
+        <p class="section-subtitle">Explore 10 foundational building blocks of modern JavaScript programming.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Topic 1: Variables -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">01</div>
+                <span class="topic-tag">Fundamentals</span>
+              </div>
+              <h3 class="topic-name">Variables (var, let, const)</h3>
+              <p class="topic-desc">Learn how variables store data values and understand differences between variable scopes and declarations.</p>
+              <div class="topic-snippet">
+                <code>let age = 20;<br>const PI = 3.14;</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(1)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 2: Data Types -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">02</div>
+                <span class="topic-tag">Data Modeling</span>
+              </div>
+              <h3 class="topic-name">Data Types</h3>
+              <p class="topic-desc">Understand Primitive types (String, Number, Boolean, Null, Undefined) and Reference types (Objects, Arrays).</p>
+              <div class="topic-snippet">
+                <code>typeof "Hello" // "string"<br>typeof 42 // "number"</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(2)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 3: Operators -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">03</div>
+                <span class="topic-tag">Operations</span>
+              </div>
+              <h3 class="topic-name">Operators</h3>
+              <p class="topic-desc">Perform mathematical arithmetic, logical comparisons, assignment shortcuts, and ternary evaluations.</p>
+              <div class="topic-snippet">
+                <code>let isAdult = (age >= 18) ? true : false;</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(3)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 4: Conditional Statements -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">04</div>
+                <span class="topic-tag">Control Flow</span>
+              </div>
+              <h3 class="topic-name">Conditional Statements</h3>
+              <p class="topic-desc">Direct program execution pathways based on true/false conditions using <code>if</code>, <code>else if</code>, and <code>else</code>.</p>
+              <div class="topic-snippet">
+                <code>if (score > 90) { grade = "A+"; }</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(4)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 5: Switch Statement -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">05</div>
+                <span class="topic-tag">Control Flow</span>
+              </div>
+              <h3 class="topic-name">Switch Statement</h3>
+              <p class="topic-desc">Execute specific code blocks out of multiple choices based on matched expression cases with <code>break</code>.</p>
+              <div class="topic-snippet">
+                <code>switch(day) { case 1: console.log("Mon"); }</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(5)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 6: Loops -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">06</div>
+                <span class="topic-tag">Iteration</span>
+              </div>
+              <h3 class="topic-name">Loops (for, while)</h3>
+              <p class="topic-desc">Automate repetitive tasks and iterate effortlessly over sequences using <code>for</code>, <code>while</code>, and <code>for...of</code>.</p>
+              <div class="topic-snippet">
+                <code>for (let i = 0; i < 5; i++) { ... }</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(6)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 7: Functions -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">07</div>
+                <span class="topic-tag">Modular Code</span>
+              </div>
+              <h3 class="topic-name">Functions</h3>
+              <p class="topic-desc">Encapsulate reusable blocks of logic using function declarations, expressions, parameters, and ES6 arrow functions.</p>
+              <div class="topic-snippet">
+                <code>const add = (a, b) => a + b;</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(7)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 8: Arrays -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">08</div>
+                <span class="topic-tag">Data Structures</span>
+              </div>
+              <h3 class="topic-name">Arrays</h3>
+              <p class="topic-desc">Store ordered collections of elements and manipulate them with modern methods like <code>map()</code>, <code>filter()</code>, and <code>push()</code>.</p>
+              <div class="topic-snippet">
+                <code>const nums = [1, 2, 3];<br>nums.push(4);</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(8)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 9: Objects -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">09</div>
+                <span class="topic-tag">Data Structures</span>
+              </div>
+              <h3 class="topic-name">Objects</h3>
+              <p class="topic-desc">Model real-world entities using key-value pairs, encapsulate custom methods, and leverage ES6 destructuring.</p>
+              <div class="topic-snippet">
+                <code>const user = { name: "Alex", role: "Dev" };</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(9)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Topic 10: DOM Manipulation -->
+        <div class="col-md-6 col-lg-4">
+          <div class="topic-card">
+            <div>
+              <div class="topic-header">
+                <div class="topic-number">10</div>
+                <span class="topic-tag">Browser APIs</span>
+              </div>
+              <h3 class="topic-name">DOM Manipulation</h3>
+              <p class="topic-desc">Interact with the web page dynamically by selecting elements, updating text, modifying styles, and handling events.</p>
+              <div class="topic-snippet">
+                <code>document.querySelector("#btn").onclick = ...</code>
+              </div>
+            </div>
+            <button class="btn-learn-more" onclick="openTopicModal(10)">
+              <span>Learn More</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       5. Logical Programs Section (10 Interactive Programs)
+       ====================================================================== -->
+  <section id="programs" class="programs-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge badge-success"><i class="bi bi-code-slash"></i> Hands-on Algorithms</span>
+        <h2 class="section-title">JavaScript Logical Programs</h2>
+        <p class="section-subtitle">10 essential coding challenges with live interactive inputs and console terminals.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Program 1: Check Odd or Even -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#01</span>
+                <h4 class="program-title">Check Odd or Even</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Determines whether an input integer is divisible by 2 (Even) or leaves a remainder of 1 (Odd).</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP1')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP1">function checkOddEven(n) {
+  return (n % 2 === 0) ? "Even" : "Odd";
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label" for="prog1Input">Enter a Number:</label>
+                <div class="row g-2">
+                  <div class="col-8">
+                    <input type="number" id="prog1Input" class="form-control-custom w-100" value="17" placeholder="e.g. 17">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runOddEven()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetOddEven()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog1Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 2: Find Largest Number -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#02</span>
+                <h4 class="program-title">Find the Largest Number</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Compares three numbers using conditional operators to identify the maximum value.</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP2')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP2">function findLargest(a, b, c) {
+  if (a >= b && a >= c) return a;
+  if (b >= a && b >= c) return b;
+  return c;
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label">Enter Three Numbers (A, B, C):</label>
+                <div class="row g-2">
+                  <div class="col-3">
+                    <input type="number" id="prog2Input1" class="form-control-custom w-100" value="45" placeholder="A">
+                  </div>
+                  <div class="col-3">
+                    <input type="number" id="prog2Input2" class="form-control-custom w-100" value="92" placeholder="B">
+                  </div>
+                  <div class="col-3">
+                    <input type="number" id="prog2Input3" class="form-control-custom w-100" value="18" placeholder="C">
+                  </div>
+                  <div class="col-3 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runLargestNumber()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetLargestNumber()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog2Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 3: Find Smallest Number -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#03</span>
+                <h4 class="program-title">Find the Smallest Number</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Evaluates multiple inputs and identifies the smallest (minimum) numeric value.</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP3')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP3">function findSmallest(a, b, c) {
+  return Math.min(a, b, c);
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label">Enter Three Numbers (A, B, C):</label>
+                <div class="row g-2">
+                  <div class="col-3">
+                    <input type="number" id="prog3Input1" class="form-control-custom w-100" value="24" placeholder="A">
+                  </div>
+                  <div class="col-3">
+                    <input type="number" id="prog3Input2" class="form-control-custom w-100" value="12" placeholder="B">
+                  </div>
+                  <div class="col-3">
+                    <input type="number" id="prog3Input3" class="form-control-custom w-100" value="56" placeholder="C">
+                  </div>
+                  <div class="col-3 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runSmallestNumber()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetSmallestNumber()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog3Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 4: Check Positive or Negative -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#04</span>
+                <h4 class="program-title">Check Positive or Negative Number</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Checks whether an entered integer or float is positive (&gt; 0), negative (&lt; 0), or zero (0).</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP4')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP4">function checkSign(num) {
+  if (num > 0) return "Positive";
+  if (num < 0) return "Negative";
+  return "Zero";
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label" for="prog4Input">Enter a Number:</label>
+                <div class="row g-2">
+                  <div class="col-8">
+                    <input type="number" id="prog4Input" class="form-control-custom w-100" value="-25" placeholder="e.g. -25">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runPositiveNegative()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetPositiveNegative()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog4Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 5: Calculate Factorial -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#05</span>
+                <h4 class="program-title">Calculate Factorial</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Calculates the product of all positive integers less than or equal to n (n! = n × (n-1)... × 1).</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP5')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP5">function factorial(n) {
+  let result = 1;
+  for (let i = n; i > 1; i--) result *= i;
+  return result;
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label" for="prog5Input">Enter Integer (0 to 20):</label>
+                <div class="row g-2">
+                  <div class="col-8">
+                    <input type="number" id="prog5Input" class="form-control-custom w-100" value="5" min="0" max="20" placeholder="e.g. 5">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runFactorial()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetFactorial()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog5Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 6: Generate Multiplication Table -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#06</span>
+                <h4 class="program-title">Generate Multiplication Table</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Creates an arithmetic multiplication table for any given number up to a specified count.</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP6')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP6">function multiplicationTable(num, limit = 10) {
+  for (let i = 1; i <= limit; i++) {
+    console.log(`${num} * ${i} = ${num * i}`);
+  }
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label">Enter Multiplier & Limit:</label>
+                <div class="row g-2">
+                  <div class="col-4">
+                    <input type="number" id="prog6Num" class="form-control-custom w-100" value="7" placeholder="Number">
+                  </div>
+                  <div class="col-4">
+                    <input type="number" id="prog6Limit" class="form-control-custom w-100" value="5" min="1" max="25" placeholder="Up to">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runMultiplicationTable()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetMultiplicationTable()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog6Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 7: Reverse a String -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#07</span>
+                <h4 class="program-title">Reverse a String</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Inverts the character order of a given string from right to left using JavaScript string methods.</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP7')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP7">function reverseString(str) {
+  return str.split('').reverse().join('');
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label" for="prog7Input">Enter a String:</label>
+                <div class="row g-2">
+                  <div class="col-8">
+                    <input type="text" id="prog7Input" class="form-control-custom w-100" value="JavaScript" placeholder="e.g. JavaScript">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runReverseString()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetReverseString()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog7Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 8: Check Palindrome -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#08</span>
+                <h4 class="program-title">Check Palindrome</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Tests if a word, phrase, or number reads the exact same backwards as forwards (e.g., racecar, madam).</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP8')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP8">function isPalindrome(str) {
+  const clean = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return clean === clean.split('').reverse().join('');
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label" for="prog8Input">Enter Word or Phrase:</label>
+                <div class="row g-2">
+                  <div class="col-8">
+                    <input type="text" id="prog8Input" class="form-control-custom w-100" value="madam" placeholder="e.g. madam, racecar">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runPalindrome()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetPalindrome()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog8Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 9: Sum of Array Elements -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#09</span>
+                <h4 class="program-title">Find Sum of Array Elements</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Iterates across an array of numbers to calculate the cumulative total sum using <code>reduce()</code>.</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP9')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP9">function sumArray(arr) {
+  return arr.reduce((acc, curr) => acc + curr, 0);
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label" for="prog9Input">Enter Numbers (comma-separated):</label>
+                <div class="row g-2">
+                  <div class="col-8">
+                    <input type="text" id="prog9Input" class="form-control-custom w-100" value="10, 25, 40, 5, 80" placeholder="10, 25, 40, 5, 80">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runArraySum()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetArraySum()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog9Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 10: Count Even Numbers in an Array -->
+        <div class="col-lg-6">
+          <div class="program-card">
+            <div class="program-header">
+              <div class="program-title-group">
+                <span class="program-num">#10</span>
+                <h4 class="program-title">Count Even Numbers in an Array</h4>
+              </div>
+            </div>
+            <div class="program-body">
+              <p class="program-desc">Filters through a list of numerical elements and counts how many are evenly divisible by 2.</p>
+              
+              <!-- Code Snippet Box -->
+              <div class="code-snippet-box">
+                <button class="copy-btn" onclick="copySnippet('codeP10')"><i class="bi bi-clipboard"></i> Copy</button>
+                <pre><code id="codeP10">function countEvenNumbers(arr) {
+  return arr.filter(n => n % 2 === 0).length;
+}</code></pre>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="program-interactive-area">
+                <label class="input-label" for="prog10Input">Enter Numbers (comma-separated):</label>
+                <div class="row g-2">
+                  <div class="col-8">
+                    <input type="text" id="prog10Input" class="form-control-custom w-100" value="12, 7, 18, 25, 40, 9, 62" placeholder="12, 7, 18, 25, 40, 9, 62">
+                  </div>
+                  <div class="col-4 d-flex gap-1">
+                    <button class="btn-run-code w-100 justify-content-center" onclick="runCountEven()">
+                      <i class="bi bi-play-fill"></i> Run
+                    </button>
+                    <button class="btn-reset-code" onclick="resetCountEven()" title="Reset">
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Terminal -->
+              <div class="terminal-output-box">
+                <div class="terminal-header">
+                  <span><i class="bi bi-terminal-fill me-1"></i> Console Output</span>
+                  <span>JavaScript ES6</span>
+                </div>
+                <div id="prog10Output" class="output-content output-muted">Click 'Run Code' to execute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. Interactive Practice Section (Coding Arena)
+       ====================================================================== -->
+  <section id="practice" class="practice-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge badge-js"><i class="bi bi-terminal"></i> Interactive Lab</span>
+        <h2 class="section-title">JavaScript Practice Arena</h2>
+        <p class="section-subtitle">Select a topic, solve coding challenges in the editor, and submit to test your solution live.</p>
+      </div>
+
+      <div class="practice-card-wrapper">
+        <!-- Top Toolbar -->
+        <div class="practice-top-bar">
+          <div class="d-flex align-items-center gap-3">
+            <label for="practiceTopicSelect" class="text-light fw-semibold mb-0">Select Problem:</label>
+            <select id="practiceTopicSelect" class="form-select practice-select">
+              <option value="1">1. Variables: Swap Two Numbers</option>
+              <option value="2">2. Conditions: Check Voting Eligibility</option>
+              <option value="3">3. Loops: Sum of Natural Numbers up to N</option>
+              <option value="4">4. Functions: Convert Celsius to Fahrenheit</option>
+              <option value="5">5. Arrays: Find Maximum Element</option>
+              <option value="6">6. Strings: Count Vowels in a String</option>
+            </select>
+          </div>
+          <div>
+            <span class="badge bg-warning text-dark px-3 py-2 fw-semibold">
+              <i class="bi bi-lightning-charge-fill me-1"></i> Live Sandbox
+            </span>
+          </div>
+        </div>
+
+        <!-- Main Editor Body -->
+        <div class="practice-main-content">
+          <!-- Question Box -->
+          <div class="question-box">
+            <span id="practiceBadge" class="question-badge">Topic • Easy</span>
+            <h3 id="practiceTitle" class="question-title">1. Declare and Swap Two Variables</h3>
+            <p id="practiceDesc" class="question-desc">Write a JavaScript function named <code>swapNumbers(a, b)</code> that swaps the values of two numbers and returns an array with the swapped values <code>[b, a]</code>.</p>
+            <div class="sample-io">
+              <strong>Sample Test Case:</strong><br>
+              <span id="practiceSampleIO">Input: swapNumbers(5, 10) &rarr; Expected Output: [10, 5]</span>
+            </div>
+          </div>
+
+          <!-- Code Editor Textarea -->
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span><i class="bi bi-file-earmark-code me-1"></i> solution.js</span>
+              <span>JavaScript (ES6)</span>
+            </div>
+            <textarea id="practiceCodeArea" class="code-textarea" spellcheck="false" placeholder="// Write your JavaScript code here..."></textarea>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="practice-actions">
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary px-4 py-2 fw-semibold" onclick="submitPracticeCode()">
+                <i class="bi bi-play-circle-fill me-1"></i> Run & Submit Answer
+              </button>
+              <button class="btn btn-outline-secondary px-3 py-2" onclick="resetPracticeCode()">
+                <i class="bi bi-arrow-counterclockwise me-1"></i> Reset
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-outline-warning text-dark px-3 py-2 fw-semibold" onclick="togglePracticeHint()">
+                <i class="bi bi-lightbulb me-1"></i> Show Hint
+              </button>
+            </div>
+          </div>
+
+          <!-- Hint Box -->
+          <div id="practiceHintBox" class="hint-box">
+            💡 Hint: You can use a temporary third variable, or modern ES6 destructuring: [a, b] = [b, a].
+          </div>
+
+          <!-- Result & Test Case Feedback Box -->
+          <div id="practiceResultBox" class="practice-result-box">
+            <!-- Populated dynamically by script.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       7. About Section
+       ====================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-card-glow"></div>
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <h2 class="about-title">About JavaScript Learning Platform</h2>
+            <p class="about-text">
+              The <strong>JavaScript Learning Platform</strong> is an educational initiative built to help college students, budding developers, and tech enthusiasts master foundational JavaScript concepts and develop strong logical thinking.
+            </p>
+            <div class="about-feature-item">
+              <div class="about-feature-icon">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div>
+                <h5 class="text-white mb-1">Concept-Driven Pedagogy</h5>
+                <p class="text-muted mb-0">From variable scopes to DOM manipulation, every topic is paired with concise notes and runnable code.</p>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-icon">
+                <i class="bi bi-code"></i>
+              </div>
+              <div>
+                <h5 class="text-white mb-1">Algorithmic Problem Solving</h5>
+                <p class="text-muted mb-0">Learn how to translate mathematical and logical problems into clean, efficient JavaScript algorithms.</p>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <div>
+                <h5 class="text-white mb-1">Academic & Project Ready</h5>
+                <p class="text-muted mb-0">Structured according to industry best practices and ideal for college academic submissions and lab exams.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <div class="p-4 bg-dark rounded-4 border border-secondary border-opacity-25 shadow">
+              <i class="bi bi-mortarboard-fill text-warning display-3 mb-3 d-inline-block"></i>
+              <h4 class="text-white fw-bold">Empowering Developers</h4>
+              <p class="text-muted small mb-3">Designed for beginner coders to build web applications with confidence.</p>
+              <div class="d-flex justify-content-center gap-3">
+                <span class="badge bg-primary px-3 py-2"><i class="bi bi-shield-check me-1"></i> 100% Free</span>
+                <span class="badge bg-success px-3 py-2"><i class="bi bi-phone me-1"></i> Responsive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. Footer Section
+       ====================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand & Description -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <span class="brand-icon">JS</span>
+            <span>JavaScript Platform</span>
+          </div>
+          <p class="footer-desc">
+            A comprehensive, beginner-friendly web application designed to teach modern JavaScript concepts, data structures, and algorithmic logic interactively.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="#features"><i class="bi bi-chevron-right"></i> Features</a></li>
+            <li><a href="#topics"><i class="bi bi-chevron-right"></i> JS Topics</a></li>
+            <li><a href="#programs"><i class="bi bi-chevron-right"></i> Programs</a></li>
+            <li><a href="#practice"><i class="bi bi-chevron-right"></i> Practice</a></li>
+            <li><a href="#about"><i class="bi bi-chevron-right"></i> About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Topics -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Core Concepts</h4>
+          <ul class="footer-links">
+            <li><a href="#topics" onclick="openTopicModal(1)"><i class="bi bi-chevron-right"></i> Variables & Scope</a></li>
+            <li><a href="#topics" onclick="openTopicModal(4)"><i class="bi bi-chevron-right"></i> Conditional Logic</a></li>
+            <li><a href="#topics" onclick="openTopicModal(6)"><i class="bi bi-chevron-right"></i> Loops & Iterations</a></li>
+            <li><a href="#topics" onclick="openTopicModal(7)"><i class="bi bi-chevron-right"></i> ES6 Arrow Functions</a></li>
+            <li><a href="#topics" onclick="openTopicModal(8)"><i class="bi bi-chevron-right"></i> Array Higher-Order Methods</a></li>
+            <li><a href="#topics" onclick="openTopicModal(10)"><i class="bi bi-chevron-right"></i> DOM Manipulation</a></li>
+          </ul>
+        </div>
+
+        <!-- Learning Resources -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Documentation</h4>
+          <p class="text-muted small">Explore official guides and specifications to deepen your knowledge:</p>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> MDN Web Docs</a></li>
+            <li><a href="https://javascript.info" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> The Modern JS Tutorial</a></li>
+            <li><a href="https://tc39.es" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> ECMA-262 Standards</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="mb-0 text-muted">&copy; 2026 JavaScript Learning Platform. All rights reserved. Designed for College Academic Projects.</p>
+        <p class="mb-0 text-muted">Crafted with <i class="bi bi-heart-fill text-danger"></i> using HTML5, CSS3, Bootstrap 5 & Vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       9. Dynamic Topic Detail Modal
+       ====================================================================== -->
+  <div class="modal fade" id="topicDetailModal" tabindex="-1" aria-labelledby="topicModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom">
+          <div>
+            <span id="topicModalTag" class="badge bg-warning text-dark mb-1">Concept</span>
+            <h4 class="modal-title fw-bold text-white mb-0" id="topicModalTitle">Topic Title</h4>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-custom">
+          <!-- Overview -->
+          <h5 class="fw-bold text-dark mb-2">Overview</h5>
+          <p id="topicModalOverview" class="text-muted"></p>
+
+          <!-- Detailed Explanation -->
+          <h5 class="fw-bold text-dark mb-2">Key Concepts & Syntax</h5>
+          <div id="topicModalExplanation" class="mb-3"></div>
+
+          <!-- Code Example -->
+          <h5 class="fw-bold text-dark mb-2">Code Example</h5>
+          <pre class="modal-code-block"><code id="topicModalCode"></code></pre>
+
+          <!-- Expected Output -->
+          <h5 class="fw-bold text-dark mb-2">Expected Output</h5>
+          <div class="modal-output-block">
+            <pre id="topicModalOutput" class="mb-0"></pre>
+          </div>
+
+          <!-- Best Practice Points -->
+          <h5 class="fw-bold text-dark mb-2">Best Practices & Key Takeaways</h5>
+          <ul id="topicModalKeyPoints" class="list-unstyled ps-1 mb-0"></ul>
+        </div>
+        <div class="modal-footer bg-light border-0">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Close</button>
+          <a href="#practice" class="btn btn-primary px-4" data-bs-dismiss="modal">
+            <i class="bi bi-code-square me-1"></i> Try in Practice Arena
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Bootstrap 5.3.3 Bundle JS (with Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom Interactive JS -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
