@@ -1,0 +1,209 @@
+/* ==========================================================================
+   PAGE 3: Chennai Beyond IT Theme Stylesheet (chennai-beyond-it.html)
+   Theme: Sustainable Smart-City, Emerald Green, Marine Blue, High-Tech Industrial Slate
+   ========================================================================== */
+
+:root {
+  --green-emerald: #059669;
+  --green-mint: #10b981;
+  --green-light: #ecfdf5;
+  --marine-blue: #0284c7;
+  --smart-navy: #0f172a;
+}
+
+[data-theme="dark"] {
+  --green-light: #064e3b;
+}
+
+.beyond-page-hero {
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(16, 185, 129, 0.2), transparent 70%),
+              radial-gradient(ellipse 40% 40% at 80% 25%, rgba(2, 132, 199, 0.18), transparent 70%),
+              var(--bg-body);
+  position: relative;
+  padding: 5.5rem 0 4rem;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.emerald-badge-glow {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.2);
+}
+
+/* Industry Filter Pills */
+.industry-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.industry-filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.industry-filter-btn:hover {
+  border-color: var(--green-mint);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.industry-filter-btn.active {
+  background: linear-gradient(135deg, #059669, #0284c7);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+/* Industry Cards */
+.industry-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.industry-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #059669, #0284c7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(5, 150, 105, 0.12);
+  border-color: rgba(5, 150, 105, 0.4);
+}
+
+.industry-card:hover::after {
+  opacity: 1;
+}
+
+.industry-icon-pill {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+
+[data-theme="dark"] .industry-icon-pill {
+  color: #34d399;
+}
+
+/* Roadmap Stepper (2026 to 2029) */
+.roadmap-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  margin: 3rem 0;
+}
+
+.roadmap-stepper-header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.roadmap-stepper-header::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  right: 30px;
+  height: 3px;
+  background: var(--border-subtle);
+  z-index: 1;
+}
+
+.step-indicator-btn {
+  position: relative;
+  z-index: 2;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-subtle);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.step-indicator-btn.active {
+  border-color: #059669;
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(5, 150, 105, 0.4);
+  transform: scale(1.1);
+}
+
+.roadmap-content-pane {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Choose Industry Simulator Tool */
+.simulator-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.simulator-result-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.simulator-result-card.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

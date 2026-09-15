@@ -1,0 +1,230 @@
+/* ==========================================================================
+   PAGE 1: Futuristic IT Theme Stylesheet (future-it.html)
+   Theme: Dark Navy, Cyan, Indigo, Subtle Neon Gradients, Tech Hologram Vibe
+   ========================================================================== */
+
+:root {
+  --it-bg-gradient: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #0b0f19 75%);
+  --it-accent-cyan: #06b6d4;
+  --it-accent-violet: #8b5cf6;
+  --it-accent-blue: #3b82f6;
+  --it-card-glow: rgba(59, 130, 246, 0.15);
+}
+
+.it-page-hero {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99, 102, 241, 0.25), transparent 70%),
+              radial-gradient(ellipse 50% 40% at 80% 30%, rgba(6, 182, 212, 0.2), transparent 70%),
+              var(--bg-body);
+  position: relative;
+  padding: 5.5rem 0 4rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.tech-badge-glow {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(139, 92, 246, 0.2));
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+/* Futuristic Interactive Cards */
+.tech-interactive-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+}
+
+.tech-interactive-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--it-accent-cyan), var(--it-accent-violet));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-interactive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.tech-interactive-card:hover::before {
+  opacity: 1;
+}
+
+.tech-icon-cyan {
+  background: rgba(6, 182, 212, 0.12);
+  color: #06b6d4;
+}
+
+.tech-icon-purple {
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+}
+
+.tech-icon-blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.tech-icon-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+/* Timeline 2026-2029 Components */
+.timeline-track {
+  position: relative;
+  padding: 2.5rem 0;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(180deg, #3b82f6, #06b6d4, #8b5cf6, #10b981);
+  transform: translateX(-50%);
+  border-radius: 9999px;
+}
+
+@media (max-width: 768px) {
+  .timeline-track::before {
+    left: 24px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-node-marker {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 3px solid #3b82f6;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .timeline-node-marker {
+    left: 24px;
+  }
+}
+
+.timeline-card {
+  width: 46%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-3px);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+}
+
+.timeline-item.left .timeline-card {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.timeline-item.right .timeline-card {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline-card {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+}
+
+/* Skills Checklist Interactive Widget */
+.skills-calculator-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.skill-checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skill-checkbox-item:hover {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.skill-checkbox-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.score-display-radial {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.readiness-score-number {
+  font-size: 3.5rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

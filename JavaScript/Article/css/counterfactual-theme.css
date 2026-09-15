@@ -1,0 +1,186 @@
+/* ==========================================================================
+   PAGE 2: Chennai Without IT Theme Stylesheet (chennai-without-it.html)
+   Theme: Warm Amber, Terracotta, Rich Navy, Urban Heritage & Metropolitan Contrast
+   ========================================================================== */
+
+:root {
+  --chennai-terracotta: #ea580c;
+  --chennai-amber: #f59e0b;
+  --chennai-warm-navy: #0f172a;
+  --chennai-cream-bg: #fffbeb;
+}
+
+[data-theme="dark"] {
+  --chennai-cream-bg: #1c1917;
+}
+
+.counterfactual-hero {
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(245, 158, 11, 0.18), transparent 70%),
+              radial-gradient(ellipse 40% 40% at 85% 20%, rgba(234, 88, 12, 0.14), transparent 70%),
+              var(--bg-body);
+  position: relative;
+  padding: 5.5rem 0 4rem;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.amber-badge-glow {
+  background: rgba(245, 158, 11, 0.15);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.15);
+}
+
+[data-theme="dark"] .amber-badge-glow {
+  color: #fbbf24;
+}
+
+/* Chennai Skyline Graphic Banner */
+.skyline-banner-container {
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.08) 100%);
+  border-radius: var(--radius-xl);
+  padding: 2rem 1.5rem 0;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .skyline-banner-container {
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.7) 100%);
+}
+
+/* Comparison Matrix Section (With IT vs Without IT) */
+.comparison-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin: 3rem 0;
+}
+
+.comparison-header-row {
+  display: grid;
+  grid-template-columns: 28% 36% 36%;
+  background: var(--bg-subtle);
+  padding: 1.25rem 1.5rem;
+  border-bottom: 2px solid var(--border-subtle);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 28% 36% 36%;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 0.2s ease;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row:hover {
+  background-color: rgba(245, 158, 11, 0.04);
+}
+
+.col-dimension {
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.col-with-it {
+  padding-right: 1.5rem;
+  border-right: 1px dashed var(--border-subtle);
+}
+
+.col-without-it {
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .comparison-header-row {
+    display: none;
+  }
+  .comparison-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .col-with-it {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px dashed var(--border-subtle);
+    padding-bottom: 1rem;
+  }
+  .col-without-it {
+    padding-left: 0;
+  }
+}
+
+/* Scenario Cards */
+.scenario-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.scenario-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(234, 88, 12, 0.1);
+  border-color: rgba(234, 88, 12, 0.35);
+}
+
+.scenario-impact-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pill-major-shift {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.pill-adaptive-shift {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pill-positive-upside {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Disclaimer Callout Box */
+.academic-disclaimer {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.academic-disclaimer-icon {
+  font-size: 1.5rem;
+  color: #f59e0b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}

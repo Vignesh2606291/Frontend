@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chennai 2029 – The Future of IT and City Development | College Project</title>
+  <meta name="description" content="A research-based college project evaluating how Chennai can develop through IT innovation, economic counterfactuals, and alternative high-growth industries by 2029.">
+
+  <!-- Bootstrap 5.3.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Core & Theme Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar"></div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand-custom" href="index.html">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-buildings text-primary fs-4"></i>
+          <div>
+            <span class="fw-bold tracking-tight">CHENNAI <span class="text-primary">2029</span></span>
+            <span class="brand-badge ms-1">BCA Research</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-primary"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMainCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link-custom active" href="index.html">
+              <i class="bi bi-house-door me-1"></i> Overview
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom" href="future-it.html">
+              <i class="bi bi-cpu me-1"></i> 1. Future of IT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom" href="chennai-without-it.html">
+              <i class="bi bi-shuffle me-1"></i> 2. Without IT?
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom" href="chennai-beyond-it.html">
+              <i class="bi bi-graph-up-arrow me-1"></i> 3. Beyond IT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom" href="references.html">
+              <i class="bi bi-journal-text me-1"></i> References
+            </a>
+          </li>
+        </ul>
+
+        <!-- Action Tools: Search & Theme Toggle -->
+        <div class="d-flex align-items-center gap-2 ms-lg-3 pt-2 pt-lg-0">
+          <button class="nav-action-btn" data-open-search title="Search Project (Ctrl+K)">
+            <i class="bi bi-search"></i>
+          </button>
+          <button id="themeToggleBtn" class="nav-action-btn" title="Switch Theme">
+            <i class="bi bi-moon-stars-fill text-primary"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-wrapper text-center">
+    <div class="container">
+      <div class="d-inline-flex align-items-center gap-2 hero-badge" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; border: 1px solid rgba(37, 99, 235, 0.25);">
+        <i class="bi bi-mortarboard-fill"></i>
+        <span>Academic Project • Department of Computer Applications</span>
+      </div>
+
+      <h1 class="hero-title fw-extrabold mx-auto text-balance" style="max-width: 960px;">
+        Chennai 2029: The Future of IT and City Development
+      </h1>
+
+      <p class="hero-subtitle mx-auto">
+        “How Chennai Can Develop Through IT, Innovation, and Alternative Industries” — An evidence-based investigation contrasting future enterprise technology trajectories against counterfactual urban realities and alternative industrial engines.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+        <a href="#topic-modules" class="btn-modern-primary">
+          <i class="bi bi-compass"></i> Explore The 3 Core Modules
+        </a>
+        <a href="#project-quiz" class="btn-modern-outline">
+          <i class="bi bi-patch-question"></i> Take Knowledge Check
+        </a>
+        <button class="btn-modern-outline" data-open-search>
+          <i class="bi bi-search"></i> Quick Search <kbd class="ms-1 small bg-secondary bg-opacity-25 px-1 py-0.5 rounded">Ctrl+K</kbd>
+        </button>
+      </div>
+
+      <!-- Chennai Skyline Vector Illustration Banner -->
+      <div class="skyline-banner-container mx-auto" style="max-width: 1100px;">
+        <svg class="skyline-svg" viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background Atmospheric Glow -->
+          <circle cx="500" cy="180" r="160" fill="url(#sunGlow)" opacity="0.4"/>
+          <!-- Sea / Marina Water Line -->
+          <rect x="0" y="215" width="1000" height="25" fill="url(#seaGrad)" opacity="0.7"/>
+          <!-- Landmark 1: Marina Lighthouse -->
+          <rect x="70" y="80" width="22" height="135" fill="#3b82f6" rx="2"/>
+          <polygon points="65,80 97,80 81,50" fill="#2563eb"/>
+          <circle cx="81" cy="62" r="5" fill="#38bdf8"/>
+          <!-- Central Station Heritage Silhouette -->
+          <rect x="140" y="125" width="130" height="90" fill="#475569" rx="2"/>
+          <rect x="195" y="65" width="22" height="60" fill="#334155"/>
+          <polygon points="190,65 222,65 206,30" fill="#dc2626"/>
+          <!-- OMR Glass High-Rise Tech Parks (DLF / Tidel) -->
+          <rect x="320" y="70" width="45" height="145" fill="#0284c7" opacity="0.85" rx="3"/>
+          <rect x="380" y="45" width="55" height="170" fill="#0369a1" opacity="0.9" rx="3"/>
+          <rect x="450" y="85" width="48" height="130" fill="#0284c7" opacity="0.8" rx="3"/>
+          <!-- IIT Madras & Guindy Tech Towers -->
+          <rect x="520" y="55" width="60" height="160" fill="#2563eb" opacity="0.9" rx="3"/>
+          <line x1="550" y1="55" x2="550" y2="20" stroke="#06b6d4" stroke-width="3"/>
+          <!-- Automobile & EV Manufacturing Gantry / Robot Crane (Sriperumbudur) -->
+          <rect x="630" y="140" width="90" height="75" fill="#64748b" rx="2"/>
+          <polygon points="635,140 680,105 725,140" fill="#475569"/>
+          <!-- Ennore / Kamarajar Port Cargo Cranes -->
+          <rect x="770" y="110" width="14" height="105" fill="#059669"/>
+          <line x1="750" y1="110" x2="830" y2="110" stroke="#059669" stroke-width="6"/>
+          <polygon points="760,110 820,110 840,140 760,110" fill="#10b981" opacity="0.6"/>
+          <rect x="850" y="90" width="16" height="125" fill="#0284c7"/>
+          <line x1="830" y1="90" x2="910" y2="90" stroke="#0284c7" stroke-width="6"/>
+          <!-- Metro Phase 2 Elevated Viaduct Pier -->
+          <rect x="20" y="175" width="960" height="10" fill="#64748b" opacity="0.6"/>
+          <rect x="250" y="185" width="15" height="30" fill="#475569"/>
+          <rect x="600" y="185" width="15" height="30" fill="#475569"/>
+          <!-- Gradients -->
+          <defs>
+            <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0%" stop-color="#38bdf8"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#0284c7"/>
+              <stop offset="50%" stop-color="#06b6d4"/>
+              <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Verified Metric Highlights (2023-2026 Facts) -->
+      <div class="row g-3 pt-4 text-start">
+        <div class="col-6 col-md-3">
+          <div class="metric-box">
+            <div class="metric-number text-primary">₹2.05L Cr+</div>
+            <div class="metric-label">Software Exports (FY24)</div>
+            <div class="metric-source">Source: ELCOT / Guidance TN</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-box">
+            <div class="metric-number text-info">15%+</div>
+            <div class="metric-label">India's GCC Talent Share</div>
+            <div class="metric-source">180+ Active GCCs (NASSCOM 2024)</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-box">
+            <div class="metric-number text-warning">$7.37B</div>
+            <div class="metric-label">#1 Electronics Exporter</div>
+            <div class="metric-source">Ministry of Commerce (FY24)</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-box">
+            <div class="metric-number text-success">~40%</div>
+            <div class="metric-label">India's Medical Tourists</div>
+            <div class="metric-source">CII / Health Ministry (2024)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Topic Cards (Navigation to the 3 Core Pages) -->
+  <section id="topic-modules" class="py-5">
+    <div class="container">
+      <div class="text-center max-w-xl mx-auto mb-5">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold text-uppercase">Three Core Dimensions</span>
+        <h2 class="display-6 fw-bold mt-2">Explore the Project Architecture</h2>
+        <p class="text-secondary">This research is partitioned into three dedicated analytical webpages, allowing deep inquiry into technological projections, hypothetical scenarios, and multi-sectoral alternatives.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Page 1 Card -->
+        <div class="col-lg-4">
+          <div class="modern-card">
+            <div class="card-icon-box" style="background: rgba(37, 99, 235, 0.12); color: #2563eb;">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary bg-opacity-10 text-primary font-mono small">PAGE 01</span>
+              <span class="badge-projection"><i class="bi bi-graph-up"></i> 2026–2029 Projections</span>
+            </div>
+            <h3 class="h4 fw-bold">The Future of IT Companies in the Next 3 Years</h3>
+            <p class="text-secondary small flex-grow-1">
+              Exploring how generative AI, autonomous agentic software, sovereign hybrid cloud, and global capability centres (GCCs) will reshape Chennai's IT landscape by 2029.
+            </p>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li><i class="bi bi-check-circle text-primary me-2"></i> 2026–2029 Interactive Timeline</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Future IT Skills Readiness Calculator</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Verified GCC data & export forecasts</li>
+            </ul>
+            <a href="future-it.html" class="btn-modern-primary w-100 justify-content-center">
+              Open Page 1: Future of IT <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Page 2 Card -->
+        <div class="col-lg-4">
+          <div class="modern-card">
+            <div class="card-icon-box" style="background: rgba(234, 88, 12, 0.12); color: #ea580c;">
+              <i class="bi bi-shuffle"></i>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning bg-opacity-10 text-warning font-mono small">PAGE 02</span>
+              <span class="badge-hypothetical"><i class="bi bi-mortarboard"></i> Counterfactual Model</span>
+            </div>
+            <h3 class="h4 fw-bold">What If Chennai Had No IT Companies?</h3>
+            <p class="text-secondary small flex-grow-1">
+              An academic economic thought experiment analyzing how employment, OMR commercial buildings, Metro Phase 2 infrastructure, and local small businesses would rebalance.
+            </p>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li><i class="bi bi-check-circle text-warning me-2"></i> 7-Pillar With IT vs. Without IT Matrix</li>
+              <li><i class="bi bi-check-circle text-warning me-2"></i> Sector Scenario Explorer (OMR, Metro, MSMEs)</li>
+              <li><i class="bi bi-check-circle text-warning me-2"></i> Illustrative economic output model</li>
+            </ul>
+            <a href="chennai-without-it.html" class="btn-modern-primary w-100 justify-content-center" style="background: linear-gradient(135deg, #ea580c, #c2410c);">
+              Open Page 2: Without IT <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Page 3 Card -->
+        <div class="col-lg-4">
+          <div class="modern-card">
+            <div class="card-icon-box" style="background: rgba(5, 150, 105, 0.12); color: #059669;">
+              <i class="bi bi-rocket-takeoff-fill"></i>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success bg-opacity-10 text-success font-mono small">PAGE 03</span>
+              <span class="badge-fact"><i class="bi bi-shield-check"></i> 10 Alternative Engines</span>
+            </div>
+            <h3 class="h4 fw-bold">How Can Chennai Develop Without IT Companies?</h3>
+            <p class="text-secondary small flex-grow-1">
+              Deep dive into Chennai's diversified pillars: Automobile & EV capital, Foxconn/Pegatron electronics, deep-sea ports, medical tourism, green hydrogen, and CMDA Master Plan 2026–2046.
+            </p>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li><i class="bi bi-check-circle text-success me-2"></i> Interactive Alternative Industries Explorer</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i> 2026–2029 City Development Roadmap</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i> Entrepreneurship & Career Simulator</li>
+            </ul>
+            <a href="chennai-beyond-it.html" class="btn-modern-primary w-100 justify-content-center" style="background: linear-gradient(135deg, #059669, #047857);">
+              Open Page 3: Beyond IT <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Objectives & Research Methodology -->
+  <section class="py-5 bg-subtle" style="background-color: var(--bg-subtle);">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold text-uppercase">Methodology & Scope</span>
+          <h2 class="display-6 fw-bold mt-2">Rigorous, Evidence-Based Urban Research</h2>
+          <p class="text-secondary">
+            This study is crafted for an advanced Bachelor of Computer Applications (BCA) capstone requirement. Rather than treating technology in an urban vacuum, this project bridges software development paradigms with regional economic geography.
+          </p>
+
+          <div class="d-flex flex-column gap-3 mt-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-3 fs-5">
+                <i class="bi bi-check2-circle"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Strict Fact vs. Prediction Separation</h5>
+                <p class="text-muted small mb-0">Every historical and current statistic is dated (2022–2024) and backed by official government bodies (Guidance TN, CMDA, NITI Aayog). Future trajectories (2026–2029) are clearly marked as projections.</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="bg-warning bg-opacity-10 text-warning p-2 rounded-3 fs-5">
+                <i class="bi bi-calculator"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Counterfactual Economic Framework</h5>
+                <p class="text-muted small mb-0">The hypothetical "Without IT" scenario is treated with academic neutrality. It avoids simplistic dystopia or utopia, examining real estate adaptive reuse, transit capital reallocation, and talent migration.</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="bg-success bg-opacity-10 text-success p-2 rounded-3 fs-5">
+                <i class="bi bi-globe-americas"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Authentic Regional Planning (CMDA 2026–2046)</h5>
+                <p class="text-muted small mb-0">Integrates the official CMDA Third Master Plan priorities including the expansion of the Chennai Metropolitan Area to 5,904 sq.km and multi-modal freight integration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-lg rounded-4 p-4" style="background: var(--bg-surface);">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold mb-0"><i class="bi bi-file-earmark-medical me-2 text-primary"></i>Official Sources Consulted</h5>
+              <span class="badge bg-secondary bg-opacity-25 text-body small">Verified 2024/2025</span>
+            </div>
+            <div class="list-group list-group-flush small">
+              <div class="list-group-item bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-bank me-2 text-primary"></i> Government of Tamil Nadu (Industries Dept)</span>
+                <span class="badge bg-light text-dark border font-mono">TN EV Policy 2023</span>
+              </div>
+              <div class="list-group-item bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-map me-2 text-warning"></i> Chennai Metropolitan Dev. Authority (CMDA)</span>
+                <span class="badge bg-light text-dark border font-mono">Third Master Plan</span>
+              </div>
+              <div class="list-group-item bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-cash-coin me-2 text-success"></i> Guidance Tamil Nadu (Investment Promotion)</span>
+                <span class="badge bg-light text-dark border font-mono">GIM 2024 Records</span>
+              </div>
+              <div class="list-group-item bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-bar-chart-line me-2 text-info"></i> NITI Aayog</span>
+                <span class="badge bg-light text-dark border font-mono">Export Prep. Index</span>
+              </div>
+              <div class="list-group-item bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-laptop me-2 text-purple"></i> NASSCOM & Knight Frank</span>
+                <span class="badge bg-light text-dark border font-mono">GCC Landscape 2024</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-top text-center">
+              <a href="references.html" class="btn-modern-outline btn-sm">
+                <i class="bi bi-journal-bookmark-fill me-1"></i> View All Citations & Bibliography &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Quiz (BCA Knowledge Check) -->
+  <section id="project-quiz" class="py-5">
+    <div class="container">
+      <div class="text-center max-w-xl mx-auto mb-4">
+        <span class="badge bg-info bg-opacity-10 text-info px-3 py-1 rounded-pill fw-bold text-uppercase">Interactive Knowledge Check</span>
+        <h2 class="display-6 fw-bold mt-2">BCA Project Viva Assessment</h2>
+        <p class="text-secondary">Test your understanding of Chennai’s IT indicators, manufacturing statistics, and regional economic models through this 6-question interactive quiz.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="quizContainer">
+            <!-- Dynamically populated by js/interactions.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            CHENNAI <span class="text-primary">2029</span>
+          </div>
+          <p class="text-muted small pe-lg-4">
+            An advanced college research project examining the intersection of enterprise IT evolution (2026–2029), counterfactual urban economies, and multi-industrial diversification for Chennai, Tamil Nadu.
+          </p>
+          <div class="d-flex gap-3 text-muted fs-5">
+            <a href="index.html" class="text-muted"><i class="bi bi-github"></i></a>
+            <a href="references.html" class="text-muted"><i class="bi bi-file-earmark-pdf"></i></a>
+            <a href="references.html" class="text-muted"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Project Modules</h6>
+          <ul class="list-unstyled">
+            <li><a href="future-it.html" class="footer-link">1. Future of IT</a></li>
+            <li><a href="chennai-without-it.html" class="footer-link">2. Without IT</a></li>
+            <li><a href="chennai-beyond-it.html" class="footer-link">3. Beyond IT</a></li>
+            <li><a href="references.html" class="footer-link">4. References</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3">Interactive Tools</h6>
+          <ul class="list-unstyled">
+            <li><a href="future-it.html#it-timeline" class="footer-link">2026–2029 IT Timeline</a></li>
+            <li><a href="future-it.html#skills-readiness" class="footer-link">Skills Readiness Score</a></li>
+            <li><a href="chennai-without-it.html#comparison-matrix" class="footer-link">With vs Without IT Matrix</a></li>
+            <li><a href="chennai-beyond-it.html#industry-simulator" class="footer-link">Career Simulator</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold mb-3">Project Information</h6>
+          <p class="text-muted small mb-2"><strong>Academic Degree:</strong> Bachelor of Computer Applications (BCA)</p>
+          <p class="text-muted small mb-2"><strong>Theme:</strong> IT Innovation & City Development</p>
+          <p class="text-muted small"><strong>Focus Years:</strong> 2026 to 2029 Horizons</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 Chennai 2029 Project. Built for College Academic Evaluation.</div>
+        <div class="text-muted small">Designed with Bootstrap 5.3.3 • Vanilla JavaScript • Chart.js</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Search Modal Dialog -->
+  <div id="searchModalBackdrop" class="search-modal-backdrop">
+    <div class="search-modal-box">
+      <div class="search-input-wrapper">
+        <i class="bi bi-search text-primary fs-5"></i>
+        <input type="text" id="globalSearchInput" placeholder="Search topics, stats, GCCs, CMDA, or EV..." autocomplete="off">
+        <button id="closeSearchModalBtn" class="btn-close shadow-none" aria-label="Close"></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <div class="text-center text-muted p-4">Type keywords such as "GCC", "EV", "CMDA", "Apollo", or "OMR"...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="nav-action-btn position-fixed bottom-0 end-0 m-4 shadow-lg" style="opacity: 0; pointer-events: none; z-index: 999;" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/quiz-data.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

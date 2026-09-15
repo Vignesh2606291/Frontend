@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>References & Official Citations | Chennai 2029 Research</title>
+  <meta name="description" content="Verified academic citations, official Government of Tamil Nadu sources, CMDA Master Plan documents, NASSCOM reports, and NITI Aayog research.">
+
+  <!-- Bootstrap 5.3.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar"></div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand-custom" href="index.html">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-buildings text-primary fs-4"></i>
+          <div>
+            <span class="fw-bold tracking-tight">CHENNAI <span class="text-primary">2029</span></span>
+            <span class="brand-badge ms-1">CITATIONS</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-primary"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMainCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link-custom" href="index.html">
+              <i class="bi bi-house-door me-1"></i> Overview
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom" href="future-it.html">
+              <i class="bi bi-cpu me-1"></i> 1. Future of IT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom" href="chennai-without-it.html">
+              <i class="bi bi-shuffle me-1"></i> 2. Without IT?
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom" href="chennai-beyond-it.html">
+              <i class="bi bi-graph-up-arrow me-1"></i> 3. Beyond IT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-custom active" href="references.html">
+              <i class="bi bi-journal-text me-1"></i> References
+            </a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 ms-lg-3 pt-2 pt-lg-0">
+          <button class="nav-action-btn" data-open-search title="Search Project (Ctrl+K)">
+            <i class="bi bi-search"></i>
+          </button>
+          <button id="themeToggleBtn" class="nav-action-btn" title="Switch Theme">
+            <i class="bi bi-moon-stars-fill text-primary"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero-wrapper text-center">
+    <div class="container">
+      <div class="d-inline-flex align-items-center gap-2 hero-badge" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; border: 1px solid rgba(37, 99, 235, 0.25);">
+        <i class="bi bi-bookmark-check-fill"></i>
+        <span>Verified Academic Bibliography</span>
+      </div>
+
+      <h1 class="hero-title fw-extrabold mx-auto text-balance" style="max-width: 900px;">
+        Research Sources & Official Citations
+      </h1>
+
+      <p class="hero-subtitle mx-auto">
+        All facts, statistics, and baseline figures utilized in this project originate from verified government publications, public planning authorities, and peer-reviewed industry bodies.
+      </p>
+
+      <!-- Filter Controls -->
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button class="btn btn-sm btn-modern-primary active" data-ref-filter="all">All Citations (8)</button>
+        <button class="btn btn-sm btn-modern-outline" data-ref-filter="govt">TN Govt & CMDA</button>
+        <button class="btn btn-sm btn-modern-outline" data-ref-filter="niti">NITI Aayog & National</button>
+        <button class="btn btn-sm btn-modern-outline" data-ref-filter="industry">NASSCOM & Industry</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main References List -->
+  <main class="py-5">
+    <div class="container">
+
+      <!-- Research Methodology & Ethics Statement -->
+      <div class="research-alert mb-5">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <span class="badge-fact"><i class="bi bi-check2-all"></i> Academic Research Ethics</span>
+          <strong class="text-primary">Strict Evidence-Based Standards Followed:</strong>
+        </div>
+        <p class="small text-secondary mb-0">
+          In strict compliance with academic standards for BCA capstone research: (1) Every historical and baseline metric cites the verified publication year (2022–2024); (2) No unverified company investments or future statistics are presented as confirmed facts; (3) Future 2026–2029 horizons are transparently designated as projection models; (4) The "Without IT" scenario is analyzed neutrally as a counterfactual thought experiment.
+        </p>
+      </div>
+
+      <div class="row g-4" id="citationsListContainer">
+
+        <!-- Citation 1: Guidance Tamil Nadu -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="govt">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary bg-opacity-10 text-primary font-mono small">GOVERNMENT PORTAL</span>
+              <span class="badge-fact">Verified 2024</span>
+            </div>
+            <h4 class="h5 fw-bold">Guidance Tamil Nadu (Investment Promotion Agency)</h4>
+            <p class="text-secondary small flex-grow-1">
+              Official records of Tamil Nadu Global Investors Meet (GIM 2024), industrial sector profiles, electronics hardware export data ($7.37B in FY24), and EV manufacturing investments.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              Guidance Tamil Nadu, Industries Department, Government of Tamil Nadu (2024). <em>Investment Facilitation & Industrial Sector Overviews</em>.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://investingintamilnadu.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Visit Official Portal
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="Guidance Tamil Nadu, Industries Department, Government of Tamil Nadu. (2024). Investment Facilitation & Industrial Sector Overviews. https://investingintamilnadu.com" title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation 2: CMDA Third Master Plan -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="govt">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning bg-opacity-10 text-warning font-mono small">URBAN PLANNING</span>
+              <span class="badge-fact">Verified 2023–2026</span>
+            </div>
+            <h4 class="h5 fw-bold">Chennai Metropolitan Development Authority (CMDA)</h4>
+            <p class="text-secondary small flex-grow-1">
+              Third Master Plan for Chennai Metropolitan Area (2026–2046) vision documents, notification of CMA boundary expansion from 1,189 sq.km to 5,904 sq.km, and Transit-Oriented Development (TOD) frameworks.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              Chennai Metropolitan Development Authority. (2023). <em>Third Master Plan for Chennai Metropolitan Area 2026–2046: Vision & Spatial Strategies</em>.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://cmdachennai.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center" style="background: linear-gradient(135deg, #ea580c, #c2410c);">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Visit CMDA Official Site
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="Chennai Metropolitan Development Authority. (2023). Third Master Plan for Chennai Metropolitan Area 2026–2046: Vision & Spatial Strategies. Government of Tamil Nadu. https://cmdachennai.gov.in" title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation 3: ELCOT & IT Department TN -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="govt">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary bg-opacity-10 text-primary font-mono small">IT & EXPORTS</span>
+              <span class="badge-fact">Verified FY24</span>
+            </div>
+            <h4 class="h5 fw-bold">Electronics Corporation of Tamil Nadu (ELCOT) & IT&DS Dept</h4>
+            <p class="text-secondary small flex-grow-1">
+              Data on Tamil Nadu IT/software exports crossing ₹2.05 lakh crore ($24.5B) in FY24, ELCOT IT parks distribution (Siruseri, Sholinganallur, Taramani), and Tamil Nadu FinTech Policy 2021.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              Information Technology and Digital Services Department, Government of Tamil Nadu. (2024). <em>Policy Note & Software Export Performance Report (2023–2024)</em>.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://elcot.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Visit ELCOT Official Site
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="Information Technology and Digital Services Department. (2024). Policy Note & Software Export Performance Report. Government of Tamil Nadu. https://elcot.in" title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation 4: NASSCOM GCC Report -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="industry">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-info bg-opacity-10 text-info font-mono small">TECH INDUSTRY</span>
+              <span class="badge-fact">Verified 2024</span>
+            </div>
+            <h4 class="h5 fw-bold">NASSCOM & Knight Frank India: GCC Landscape</h4>
+            <p class="text-secondary small flex-grow-1">
+              Comprehensive benchmarking report identifying Chennai as holding >15% of India’s GCC talent, tracking over 180 global capability centers and commercial office space absorption across OMR and Porur.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              NASSCOM & Knight Frank India. (2024). <em>GCCs in India: Building Future-Ready Capability Centres in Tier-1 Hubs</em>.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://nasscom.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Visit NASSCOM
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="NASSCOM & Knight Frank India. (2024). GCCs in India: Building Future-Ready Capability Centres in Tier-1 Hubs. NASSCOM Research." title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation 5: NITI Aayog Export Index -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="niti">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success bg-opacity-10 text-success font-mono small">NATIONAL POLICY</span>
+              <span class="badge-fact">Verified 2023</span>
+            </div>
+            <h4 class="h5 fw-bold">NITI Aayog: Export Preparedness Index (EPI)</h4>
+            <p class="text-secondary small flex-grow-1">
+              National ranking placing Tamil Nadu as the #1 Exporting State in India, evaluating institutional policy framework, coastal logistics infrastructure, and export diversification.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              NITI Aayog, Government of India. (2023). <em>Export Preparedness Index (EPI 2022/2023 Report)</em>.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://www.niti.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center" style="background: linear-gradient(135deg, #059669, #0284c7);">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Visit NITI Aayog
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="NITI Aayog. (2023). Export Preparedness Index 2022. Government of India. https://www.niti.gov.in" title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation 6: Tamil Nadu EV Policy -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="govt">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success bg-opacity-10 text-success font-mono small">STATE POLICY</span>
+              <span class="badge-fact">Verified 2023</span>
+            </div>
+            <h4 class="h5 fw-bold">Tamil Nadu Electric Vehicles Policy 2023</h4>
+            <p class="text-secondary small flex-grow-1">
+              Official policy guidelines detailing capital subsidies, road tax exemptions, battery pack localization incentives, and Tamil Nadu's position producing ~70% of electric 2-wheelers in India.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              Government of Tamil Nadu. (2023). <em>Tamil Nadu Electric Vehicles Policy 2023</em>. Industries, Investment Promotion and Commerce Department.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://www.tn.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center" style="background: linear-gradient(135deg, #059669, #0284c7);">
+                <i class="bi bi-box-arrow-up-right me-1"></i> View TN Portal
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="Government of Tamil Nadu. (2023). Tamil Nadu Electric Vehicles Policy 2023. Industries, Investment Promotion and Commerce Department." title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation 7: Ministry of Commerce Hardware Exports -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="niti">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary bg-opacity-10 text-primary font-mono small">COMMERCE & TRADE</span>
+              <span class="badge-fact">Verified FY24</span>
+            </div>
+            <h4 class="h5 fw-bold">Ministry of Commerce and Industry: Export Statistics</h4>
+            <p class="text-secondary small flex-grow-1">
+              Trade statistics documenting Tamil Nadu leading all Indian states in electronics goods exports ($7.37 billion in FY 2023–24), propelled by Foxconn, Pegatron, and Tata Electronics.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              Ministry of Commerce and Industry, Government of India. (2024). <em>Foreign Trade Performance Analysis & Commodity Export Dashboards</em>.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://commerce.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Visit Commerce Portal
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="Ministry of Commerce and Industry. (2024). Foreign Trade Performance Analysis. Government of India. https://commerce.gov.in" title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation 8: Healthcare & CII Medical Tourism -->
+        <div class="col-lg-6 citation-card-col" data-ref-category="industry">
+          <div class="modern-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning bg-opacity-10 text-warning font-mono small">HEALTHCARE</span>
+              <span class="badge-fact">Verified 2024</span>
+            </div>
+            <h4 class="h5 fw-bold">Confederation of Indian Industry (CII) & Health Ministry</h4>
+            <p class="text-secondary small flex-grow-1">
+              Medical Value Travel in India studies establishing Chennai as receiving ~40% of international medical tourists, reviewing healthcare cost differentials, NABH/JCI accreditations, and hospital density.
+            </p>
+            <div class="bg-subtle p-2 rounded small font-mono text-muted mb-3">
+              Confederation of Indian Industry (CII). (2024). <em>Medical Value Travel in India: Opportunities, Hospital Hubs and Southern Growth Corridors</em>.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="https://www.cii.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-modern-primary flex-grow-1 justify-content-center">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Visit CII Portal
+              </a>
+              <button class="btn btn-sm btn-modern-outline copy-citation-btn" data-citation="Confederation of Indian Industry (CII). (2024). Medical Value Travel in India: Opportunities, Hospital Hubs and Southern Growth Corridors. CII Healthcare Council." title="Copy Citation">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- College Presentation Summary Box -->
+      <div class="card p-4 rounded-4 border-0 shadow-sm mt-5" style="background: var(--bg-surface);">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="fw-bold mb-0 text-primary"><i class="bi bi-mortarboard me-2"></i> BCA Viva Presentation Quick Reference</h4>
+          <span class="badge bg-secondary bg-opacity-25 text-body small">For Faculty Review</span>
+        </div>
+        <p class="small text-secondary mb-3">
+          Use these concise citation notes during your viva presentation to explain the empirical validation behind the project:
+        </p>
+        <div class="row g-3 small">
+          <div class="col-md-4">
+            <div class="p-3 rounded-3 bg-subtle border">
+              <strong>1. IT Baseline:</strong> ₹2.05L Cr software exports (ELCOT FY24), 15%+ India GCC talent (Knight Frank 2024).
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 rounded-3 bg-subtle border">
+              <strong>2. Manufacturing Moat:</strong> #1 Electronics exporter $7.37B (Ministry of Commerce FY24), 35% India auto production.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 rounded-3 bg-subtle border">
+              <strong>3. Regional Expansion:</strong> CMDA CMA expansion to 5,904 sq.km, Third Master Plan (2026–2046).
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">CHENNAI <span class="text-primary">2029</span></div>
+          <p class="text-muted small pe-lg-4">
+            BCA Capstone Project • Complete academic research documentation for Chennai, Tamil Nadu.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Pages</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home Overview</a></li>
+            <li><a href="future-it.html" class="footer-link">1. Future of IT</a></li>
+            <li><a href="chennai-without-it.html" class="footer-link">2. Without IT</a></li>
+            <li><a href="chennai-beyond-it.html" class="footer-link">3. Beyond IT</a></li>
+            <li><a href="references.html" class="footer-link">References</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3">Academic Transparency</h6>
+          <p class="text-muted small mb-1">Citations strictly dated (2022–2024)</p>
+          <p class="text-muted small">1-Click Citation Copy in APA/IEEE Format</p>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold mb-3">BCA Project Details</h6>
+          <p class="text-muted small mb-1">Bachelor of Computer Applications</p>
+          <p class="text-muted small">Pair Programming & Web Engineering</p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center text-muted small">
+        &copy; 2026 Chennai 2029 Project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Search Modal Dialog -->
+  <div id="searchModalBackdrop" class="search-modal-backdrop">
+    <div class="search-modal-box">
+      <div class="search-input-wrapper">
+        <i class="bi bi-search text-primary fs-5"></i>
+        <input type="text" id="globalSearchInput" placeholder="Search topics, stats, GCCs, CMDA, or EV..." autocomplete="off">
+        <button id="closeSearchModalBtn" class="btn-close shadow-none" aria-label="Close"></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <div class="text-center text-muted p-4">Type keywords such as "GCC", "EV", "CMDA", "Apollo", or "OMR"...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="nav-action-btn position-fixed bottom-0 end-0 m-4 shadow-lg" style="opacity: 0; pointer-events: none; z-index: 999;" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
